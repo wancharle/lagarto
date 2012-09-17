@@ -1,0 +1,17 @@
+{% load staticfiles %}
+ <div class="container">
+    <div class="grid9 menu submenu {% block submenu_selecionado %}menu-home{%endblock%} first">
+         <ul>
+       <li class="home"><a href="pousada.html" >HOME</a></li>
+       <li class="contato"><a href="pousada.html" >CONTATO</a></li>
+       <li class="reservas"><a href="pousada.html" >RESERVAS</a></li>
+       <li class="tarifas"><a href="pousada.html" >TARIFAS</a></li>
+        </ul>  
+    </div>
+
+    <div class="grid3">
+        <p class="flag"><a href="/troca-idioma"><img src="{% static "img/flag.png" %}"/></a></p>
+    </div>
+</div>
+
+

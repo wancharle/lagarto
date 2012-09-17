@@ -1,0 +1,107 @@
+@font-face {
+	font-family: TrajanPro;
+	src: url('../fonts/TrajanPro-Regular.otf');
+}
+@font-face {
+	font-family: TrajanPro;
+    font-weight:bold;
+	src: url('../fonts/TrajanPro-Bold.otf');
+}
+@font-face {
+	font-family: Maryan;
+	src: url('../fonts/Maryam-Regular.otf');
+}
+
+.TrajanPro { font-family: TrajanPro; }
+
+.container {
+	width: 978px;
+	margin: 0 auto;
+}
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
+	float: left;
+	margin-left: 30px;
+}
+.grid1 {
+	width: 54px;
+}
+.grid2 {
+	width: 138px;
+}
+.grid3 {
+	width: 222px;
+}
+.grid4 {
+	width: 306px;
+}
+.grid5 {
+	width: 390px;
+}
+.grid6 {
+	width: 474px;
+}
+.grid7 {
+	width: 558px;
+}
+.grid8 {
+	width: 642px;
+}
+.grid9 {
+	width: 726px;
+}
+.grid10 {
+	width: 810px;
+}
+.grid11 {
+	width: 894px;
+}
+.first {
+	margin-left: 0;
+	clear: left;
+}
+.clear {clear:both;}
+
+body {
+ background-color:white;   
+   width:100%; 
+ }
+
+a {
+    
+text-decoration:none;
+}
+
+div.menu { text-align:right;} 
+div.menu { text-align:left;}
+div.menu ul {float:right}
+div.submenu ul {float:none}
+
+div.menu li{  font-family:TrajanPro; padding:20px 10px; height:40px;display:block;float:left;margin-left:20px;}
+div.menu a { color:#666666;font-size:14px;line-height:40px;}
+div.menu a img{ position:relative;top:5px;margin-right:5px;}
+div.submenu li{margin-left:10px; margin-right:10px;}
+div.submenu a {color:#000;}
+
+p.login { font-size:12px; font-family:"Helvetica"; font-weight:oblique;text-align:right; }
+p.login a {color:#ccc;}
+p.flag {text-align:right;padding:20px 0px;height:40px;float:right;}
+p.flag a {line-height:40px;}
+
+
+div.cabecalho {
+    margin-top:20px;
+}
+
+
+div.slider {width:1440px;height:564px;clear:left;float:left;position:relative;left:-231px;}
+div.slider div.images {height:564px;float:left;width:1440px;}
+div.slider div.images img {float:left}
+div.slider div.botoes {position:relative;top:-564px;float:left;left:0px;z-index:1000;height:564px;width:1440px;}
+
+div.slider div.prev, div.slider div.next {width:231px; height:564px;color:white;line-height:564px;}
+div.slider div.prev {float:left;text-align:right;background:url(../img/prev.png) no-repeat right center;} 
+div.slider div.next {float:right;text-align:left;background:url(../img/next.png) no-repeat left center;}
+
+div.slider div.leg {height:55px;background-color:black;color:white;z-index:1000;}
+div.slider div.leg {float:left;position:relative; top:-100px;left:300px;text-align:center;padding:0px 44px;font-family:"Maryan"; font-size:75px;line-height:57px;}
+div.slider div.grupo {width:1440px;height:564px;float:left;}

@@ -1,0 +1,16 @@
+bin/
+apache2/bin
+apache2/conf/mime.types
+apache2/lib
+apache2/modules
+apache2/logs
+*.DS_Store
+*.swp
+*.pyc
+*.log
+*.pot
+*.pyc
+*.egg-info
+*/*/settings/local.py
+*/*/settings/local/*
+docs/_build

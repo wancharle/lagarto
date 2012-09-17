@@ -1,0 +1,24 @@
+
+{% load staticfiles %}
+
+<div class="container" >
+    <div class="slider">
+        <div class="images" id="images">
+                <div class="grupo">
+                    <img src="{% static "img/capa/slider3.jpg" %}" /> 
+                    <div class="leg opa50"><span class="opa100">Sofisticação e Charme</span></div>
+                </div>
+           <img src="{% static "img/capa/slider1.jpg" %}" />
+           <img src="{% static "img/capa/slider2.jpg" %}" />
+        </div>
+        <div class="botoes">
+            <div class="prev" id="prev"></div>
+            <div class="next" id="next"></div>
+              </div>
+</div>
+
+<script>
+
+$('#images').cycle('scrollLeft');
+</script>
+
