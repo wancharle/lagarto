@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-
 {% load staticfiles %}
 
+
 {% block title %}Pousada Rabo do Lagarto {% endblock %}
+
 
 {% block extra_head %}
     <link rel="shortcut icon" type="image/x-icon" href="http:/-------/favicon.ico" />
@@ -22,25 +23,32 @@
     <script src="{% static "js/jquery.cycle.all.js" %}" type="text/javascript"></script>
 {% endblock %}
 
-{% block conteudo %}  
- 
-    {% include "lagarto/includes/menu_superior.html" %}
 
+{% block conteudo %}  
+
+    <div class="container cabecalho">
+        <div class="grid2 first"><a href="/" title="Rabo do Lagarto" id="logo"><img src="{% static "img/logo.gif" %}" alt="Rabo do Lagarto logo" /></a> </div>
+        <div class="grid10 menu {% block menu-selecionado %} {%endblock %}">
+            <ul>
+           <li class="pousada"><a href='{% url pousada %}'><img src="{% static "img/icone-pousada.png" %}" />A POUSADA</a></li>
+           <li class="suites"><a href="{% url suites %}" ><img src="{% static "img/icone-suites.png" %}" />SUÍTES</a></li>
+           <li class="estrutura"><a href="{% url estrutura %}" ><img src="{% static "img/icone-estrutura.png" %}" />ESTRUTURA</a></li>
+           <li class="locatizacao"><a href="{% url localizacao %}" ><img src="{% static "img/icone-localizacao.png" %}" />LOCALIZAÇÃO</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div style="float:left;width:100%;max-width:2040px; overflow:hidden;">
-    {% block conteudo_superior %} 
-        {% include "lagarto/includes/slider.html" %}   
-    {% endblock %}
+        {% block conteudo_superior %} 
+            {% include "lagarto/includes/slider.html" %}   
+        {% endblock %}
     </div>
-    
+
     {% include "lagarto/includes/menu_inferior.html" %}
-        
+
     <div class="container" style="padding-bottom:100px;">
         {% block conteudo_inferior %}
-        
-        {% include "lagarto/includes/tarifas.html" %}
-       
-        
+            {% include "lagarto/includes/tarifas.html" %}
         {% endblock %}
         <div class="clear"></div>
     </div>
