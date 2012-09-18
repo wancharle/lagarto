@@ -142,3 +142,9 @@ div.tarifas span.preco {font-size:14px;}
 
 div.pousada { margin:0 auto; width:1440px;height:564px;background: url("../img/pousada/fundo.jpg");}
 
+div.pousada div.container {padding-top:115px; }
+div.pousada div.col1 h2 { font-family:TrajanPro; line-height:25px;margin-top:30px; font-size:18px;color:white;cursor:pointer;}
+div.pousada div.col1 h2.ativo { color:#ff9933;}
+div.pousada div.col2 p { font-family:"HelveticaNeue"; font-size:12px;line-height:14px; text-align:justify;color:#999;margin-bottom:15px;}
+div.pousada div.col3 a img {width:53px; height:53px; border:none; }
+div.pousada div.col3 a { display:block;float:left; margin:0px 8px 8px 0px;}
