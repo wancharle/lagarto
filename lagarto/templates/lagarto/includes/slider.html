@@ -1,7 +1,7 @@
 
 {% load staticfiles %}
 
-<div class="container" >
+<div class="container" id="slide" style="display:none";>
     <div class="slider">
         <div class="images" id="images">
 
@@ -48,7 +48,17 @@
 </div>
 
 <script>
+$(document).ready(function() {
+  // Handler for .ready() called.
+    $("#slide").show();
+    $('#images').cycle(
+    { 
+        fx:'fade',
+        next:'#next',
+        prev:'#prev'
+    }    
+    );
 
-$('#images').cycle('scrollLeft');
+});
 </script>
 

@@ -109,7 +109,7 @@ div.slider div.images {height:564px;float:left;width:1440px;}
 div.slider div.images img {float:left}
 div.slider div.botoes {position:relative;top:-564px;float:left;left:0px;z-index:1000;height:564px;width:1440px;}
 
-div.slider div.prev, div.slider div.next {width:231px; height:564px;color:white;line-height:564px;}
+div.slider div.prev, div.slider div.next {width:231px;cursor:pointer; height:564px;color:white;line-height:564px;}
 div.slider div.prev {float:left;text-align:right;background:url(../img/prev.png) no-repeat right center;} 
 div.slider div.next {float:right;text-align:left;background:url(../img/next.png) no-repeat left center;}
 
