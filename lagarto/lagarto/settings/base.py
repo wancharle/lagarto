@@ -24,7 +24,7 @@ PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/wancharle/webapps/media/lagarto/'
-STATIC_URL = '/static/'
+STATIC_URL = '/static/lagarto/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static'),

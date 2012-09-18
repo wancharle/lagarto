@@ -1,4 +1,5 @@
 bin/
+apache2/
 apache2/bin
 apache2/conf/mime.types
 apache2/lib

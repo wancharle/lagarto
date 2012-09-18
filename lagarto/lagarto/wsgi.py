@@ -14,7 +14,7 @@ project = '/home/wancharle/webapps/lagarto/lagarto/'
 workspace = os.path.dirname(project)
 sys.path.append(workspace)
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'lagarto.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'lagarto.settings.local'
 from django.core.handlers.wsgi import WSGIHandler
 
 application = WSGIHandler()
