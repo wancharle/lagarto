@@ -1,11 +1,11 @@
 {% load staticfiles %}
  <div class="container">
-    <div class="grid9 menu submenu {% block submenu_selecionado %}menu-home{%endblock%} first">
+    <div class="grid9 menu submenu {% block submenu_selecionado %}{%endblock%} first">
          <ul>
-       <li class="home"><a href="pousada.html" >HOME</a></li>
-       <li class="contato"><a href="pousada.html" >CONTATO</a></li>
-       <li class="reservas"><a href="pousada.html" >RESERVAS</a></li>
-       <li class="tarifas"><a href="pousada.html" >TARIFAS</a></li>
+       <li class="home"><a href="/" >HOME</a></li>
+       <li class="contato"><a  href="#" onclick="toogle_menu('contato');return false;" >CONTATO</a></li>
+       <li class="reservas"><a href="#" onclick="toogle_menu('reservas');return false;" >RESERVAS</a></li>
+       <li class="tarifas"><a  href="#" onclick="toogle_menu('tarifas');return false;"  >TARIFAS</a></li>
         </ul>  
     </div>
 
@@ -14,4 +14,15 @@
     </div>
 </div>
 
+
+<script>
+function toogle_menu(menu){
+        $('div.submenu li').removeClass("sombra");
+        $("li."+menu).addClass("sombra");
+        $('div.menu-ativo').fadeOut();
+        $('div.'+menu).addClass("menu-ativo");
+        $('div.'+menu).fadeIn();
+       window.scrollBy(0,400); 
+}
+</script>
 

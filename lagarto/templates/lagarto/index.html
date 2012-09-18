@@ -35,8 +35,14 @@
     
     {% include "lagarto/includes/menu_inferior.html" %}
         
-    <div class="container">
-        {% block conteudo_inferior %}{% endblock %}
+    <div class="container" style="padding-bottom:100px;">
+        {% block conteudo_inferior %}
+        
+        {% include "lagarto/includes/tarifas.html" %}
+       
+        
+        {% endblock %}
+        <div class="clear"></div>
     </div>
 
 {% endblock %}

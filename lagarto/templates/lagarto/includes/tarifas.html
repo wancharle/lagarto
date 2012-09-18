@@ -1,0 +1,50 @@
+{%  load staticfiles  %}
+<div class="tarifas" id="tarifas" style="display:none;">
+    <div class="col1 first">
+        
+        <div class="galeria"> 
+              <div>
+                    <img src="{% static "img/tarifas/foto1.jpg" %}" />
+                    <p>Sofisticação e Luxo</p>
+              </div>
+              <div>
+                    <img src="{% static "img/tarifas/foto1.jpg" %}" />
+                    <p>Figura 2</p>
+              </div>
+        </div>
+        <ul class="nav"></ul> 
+    </div>
+   
+    <div class="col2">
+        <h2>Suítes Confort</h2>
+        <div>
+            <p>São suítes de menor porte, apenas duas têm varanda - Toscana e Provence - e a Provence tem 
+lareira também. Porém, todas as confort têm a mesma qualidade de serviços de todas as categorias: quarto com banheiro privativo, frigobar, TV LCD, 147 canais SKY HDTV,internet  wireless gratuita, lençois de algodão egípcio, peças de enxoval Trussardi, Alexandre Herchcovitch e Buddemeyer, edredon de pluma de ganso, roupões de banho, secador de cabelo, shampoo e condicionador da L'Occitane.</p>
+            <p><span style="color:#33CC33">Conheça tudo sobre nossas suítes confort!</span><span class="tarifa">Tarifa: R$ <span class="preco">480</span></span></p>
+        </div>
+       
+        <h2>Suítes Estúdio</h2>
+        <div>
+            <p>Todas têm sala, varanda e lareira, quarto com banehiro privativo, frigobar, TV LCD, 147 canais SKY HDTV,internet wireless gratuita, lençois de algodão egípcio, peças de enxoval Trussardi, Alexandre Herchcovitch e Buddemeyer, edredon de pluma de ganso, roupões de banho, secador de cabelo, shampoo e condicionador da L'Occitane.</p>
+        </div>
+
+        <h2>Suítes Loft</h2>
+        <div>
+            <p>Todas têm banheira de ofurô OU hidro, com lareira e varanda, quarto com banehiro privativo, frigobar, TV LCD, 147 canais SKY HDTV,internet wireless gratuita, lençois de algodão egípcio, peças de enxoval Trussardi, Alexandre Herchcovitch e Buddemeyer, edredon de pluma de ganso, roupões de banho, secador de cabelo, shampoo e condicionador da L'Occitane.</p>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+
+    $('div.galeria').cycle({
+        fx:'fade',
+        pager:"ul.nav",
+        pagerAnchorBuilder: function(idx, slide) {
+             return '<li><a href="#"><img src="' + $(slide).find("img").attr("src") + '" width="40" height="40" /></a></li>'; 
+        } 
+    });
+
+});
+</script>
+
