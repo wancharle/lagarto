@@ -139,8 +139,9 @@ div.tarifas div.col2 { width:523px;}
 div.tarifas div.col2 h2 {font-family:"ConeriaScriptDemo"; font-size:18px; color:#000;line-height:28px;}
 div.tarifas div.col2 div { margin-left:12px;border-bottom:1px solid #ccc;padding-bottom:10px;margin-bottom:20px;}
 div.tarifas div.col2 div p {font-family:"HelveticaNeue"; font-size:12px; color:#666;line-height:16px;text-align:justify;margin-bottom:5px;}
-div.tarifas span.tarifa { font-size:10px;float:right; }
+div.tarifas div.col2 div p.tarifa { font-size:10px;float:right; color:black;}
 div.tarifas span.preco {font-size:14px;}
+div.tarifas div.col2 div p.green {color:#33CC33 ; float:left;}
 
 
 div.pousada { width:1440px;height:564px;background: url("../img/pousada/fundo.jpg"); position:relative;left:-231px;}

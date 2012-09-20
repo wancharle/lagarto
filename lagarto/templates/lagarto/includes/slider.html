@@ -1,7 +1,7 @@
 
 {% load staticfiles %}
 
-<div class="container" id="slide" style="display:none";>
+<div class="container" id="slide" style="visibility:hidden";>
     <div class="slider">
         <div class="images" id="images">
 
@@ -48,9 +48,9 @@
 </div>
 
 <script>
-$(document).ready(function() {
+$(window).load(function() {
   // Handler for .ready() called.
-    $("#slide").show();
+    $("#slide").css("visibility","visible");
     $('#images').cycle(
     { 
         fx:'fade',
