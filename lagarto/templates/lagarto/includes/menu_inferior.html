@@ -14,15 +14,19 @@
     </div>
 </div>
 
-
+<div class="menu-ativo"></div>
 <script>
+var scroll=true;
 function toogle_menu(menu){
         $('div.submenu li').removeClass("sombra");
         $("li."+menu).addClass("sombra");
-        $('div.menu-ativo').fadeOut();
+        if (scroll){
+            window.scrollBy(0,400); 
+            scroll=false;
+        }
+        $('div.menu-ativo').hide();
         $('div.'+menu).addClass("menu-ativo");
         $('div.'+menu).fadeIn();
-       window.scrollBy(0,400); 
 }
 </script>
 

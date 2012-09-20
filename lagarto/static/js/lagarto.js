@@ -9,11 +9,11 @@ function menu_com_fade(container_id,menu_tag){
             var bloco = $(this).attr("data-bloco");
             var menu = $(this);
             menu.addClass("ativo");
-            $("#" + container_id +" div.bloco.ativo").fadeOut(function (){
+            $("#" + container_id +" div.bloco.ativo").hide();
                 $("#" + container_id + " div.bloco.ativo").removeClass('ativo');
                 $("#"+bloco).fadeIn();
                 $("#"+bloco).addClass("ativo");
-            });
+           
         });
 }
  
