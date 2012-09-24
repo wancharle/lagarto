@@ -164,3 +164,17 @@ div.reservas div.borda-sombreada {width:470px ; background-color:#F1EFEF;padding
 div.reservas div.col1 p {font-family: Helvetica; color:#999; font-style:oblique; padding-bottom:15px;line-height:15px;font-size:12px;text-align:justify;}
 div.reservas div.col1 div.borda-sombreada p.telefone { font-style:normal;line-height:20px;font-size:20px;text-align:right;color:#333;margin-top:5px;}
 div.reservas div.col1 div.borda-sombreada p.telefone span {font-size:12px;}
+
+div.reservas div.col2 form{ width:400px;float:right;line-height:27px;}
+div.reservas div.col2 label {width:100px;margin:0px;padding:0px;float:left;color:#333;text-align:left;font-family:Helvetica; font-style:oblique; font-size:12px;}
+div.reservas div.col2 input,
+div.reservas div.col2 select {width:295px;clear:both;font-size:12px;height:20px;margin-bottom:2px;color:#666;background-color:#ccc; border:none;}
+
+div.reservas div.col2 p.botao {text-align:right;font-family:Helvetica;font-size:12px;color:#999;} 
+div.reservas div.col2 p.botao input{ 
+width:72px;background-color:#333; color:white;margin-top:10px; margin-left:5px;
+cursor: pointer; 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
