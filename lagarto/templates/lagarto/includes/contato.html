@@ -1,18 +1,20 @@
 {%  load staticfiles  %}
-<div class="contato" id="contato" style="display:none;">
+<div class="contato reserva1" id="contato" style="display:none;">
     <div class="col1 grid6 first">
-        
-        <div class="borda-sombreada">
-            <p><span style="color:#333;font-weight:normal;">Para reservar</span>, pedimos que seja efetuado um depósito de 50% da diária e nos envie o comprovante desse depósito por email para que sua reserva seja confirmada. Cobramos 10% sobre o total das despesas. <span style="color:#333;font-weight:normal;">Não aceitamos cartão de crédito.</span></p>
-            <p>Lembramos que só hospedamos crianças a partir dos 14 anos de idade. Ainda não estamos preparados para receber nossos pequenos hóspedes.</p>
-            <p>Verifique a nossa disponibilidade de vagas. </p>
-            <p>Teremos o maior prazer em atende-lo também pelo nosso telefone: </p>
-            <p class="telefone"><span>55 27</span>  3248-2383<br/>9942-6121</p>
+        <div class="borda-sombreada"> 
+            <p style="width:325px;">Entre em contato conosco pelo telefone ou utilize o campo ao lado. <br/>rabodolagarto@hotmail.com </p>
+            <p class="telefone"><span>(27)</span> 3248-2383<br/>9942-6121</p>
+            <div class="clear"></div>
+        </div>
+        <div class="divulgacao">
+            <p>Marerial de Divulgação e clipping da pousada</p>
+            <a href=""><img src="{% static "img/pdf.png" %}" height="20px" width="20px" /> Clipping e Divulgação.pdf</a>
+            <p>download</p>
         </div>
     </div>
    
     <div class="col2 grid6">
-        <form id="formReservas">
+        <form id="formContato">
 
         <label for="id_nome">Nome:</label>
         <input type="textbox" id="id_nome" name="nome" />
@@ -21,17 +23,15 @@
         <input type="textbox" id="id_datanascimento" name="datanascimento" />
 
         <label for="id_email">Email:</label>
-        <input type="textbox" id="id_email" name="email"/>
+        <input type="textbox" id="id_email" name="email" />
 
 
         <label for="id_telefone">Telefone:</label>
-        <input type="textbox" id="id_telefone" name="telefone"/>
+        <input type="textbox" id="id_telefone" name="telefone" />
         
-        <label for="id_telefon">Telefone:</label>
-        <input type="textbox" id="id_telefone" name="telefone"/>
-        
-        
-        <p class="botao">rabodolagarto@hotmail.com <input type="submit" value="enviar"></p>
+        <label for="id_mensagem">Mensagem:</label>
+        <textarea id="id_mensagem" name="mensagem" class="borda-sombreada" /></textarea> 
+        <p class="botao"><input type="submit" value="enviar"></p>
 
         </form>
     </div>
@@ -41,7 +41,7 @@
     <script> 
         // wait for the DOM to be loaded 
         $(document).ready(function() { 
-            $('#formReservas').ajaxForm(function() { 
+            $('#formContato').ajaxForm(function() { 
                 alert("teste!"); 
             }); 
         }); 
