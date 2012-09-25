@@ -144,14 +144,23 @@ div.tarifas span.preco {font-size:14px;}
 div.tarifas div.col2 div p.green {color:#33CC33 ; float:left;}
 
 
-div.pousada { width:1440px;height:564px;background: url("../img/pousada/fundo.jpg"); position:relative;left:-231px;}
 
-div.pousada div.container {padding-top:61px; }
-div.pousada div.col1 h2 { font-family:TrajanPro; line-height:25px;margin-bottom:30px; font-size:16px;color:white;cursor:pointer;}
-div.pousada div.col1 h2.ativo { color:#ff9933;}
+div.pousada,div.suites { width:1440px;height:564px;background: url("../img/pousada/fundo.jpg"); position:relative;left:-231px;}
+div.pousada div.container, div.suites div.container {padding-top:61px; }
+
+div.menu-lateral { font-family:TrajanPro;color:white; }
+div.menu-lateral ul { margin-bottom:20px;}
+div.menu-lateral ul li { font-size:12px;margin-left:15px;line-height:14px; cursor:pointer;}
+div.menu-lateral h2 {line-height:25px;margin-bottom:30px; font-size:16px;cursor:pointer;}
+div.suites div.menu-lateral h2 { margin-bottom:0px;}
+div.menu-lateral h2.ativo, div.menu-lateral li.ativo{ color:#ff9933;}
+
 div.pousada div.col2 p { font-family:"HelveticaNeue"; font-size:11px;line-height:14px; text-align:justify;color:#999;margin-bottom:15px;}
 div.pousada div.col3 a img {width:53px; height:53px; border:none; }
 div.pousada div.col3 a { display:block;float:left; margin:0px 8px 8px 0px;}
+
+
+
 
 div.bloco { display:none;}
 
