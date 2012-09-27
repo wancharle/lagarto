@@ -1,15 +1,25 @@
 {% extends "lagarto/index.html" %}
 {% load staticfiles %}
 
+{% block css %}
+{{ block.super }}
+    <link rel="stylesheet" href="{% static "fancybox/jquery.fancybox.css" %}" type="text/css" media="screen" charset="utf-8">
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+        <script src="{% static "fancybox/jquery.fancybox.js" %}" type="text/javascript"></script>
+{% endblock %}
 
 {% block menu-selecionado %}menu-suites{% endblock %}
+
 {% block conteudo_superior %}
 
 <div class="container">
 <div class="suites">
     <div class="container" id="area-suites">
 
-    <div class="grid3 first col1 menu-lateral">
+        <div class="grid3 first col1 menu-lateral">
             <nav>
             <h2 class="ativo" data-bloco="loft";>Suíte Loft</h2>
                 <ul>
@@ -40,29 +50,36 @@
            </nav>
         </div>
 
-        <div id="a-pousada" class="bloco">
-        <div class="grid3 col2">
-            <p>A pousada Rabo do Lagarto está instalada em um ambiente de contemplação de grande beleza paisagística e, por isso mesmo foi projetada como uma grande arquibancada de frente para a Pedra Azul.</p>
-            <p>O charme, a sofisticação, privacidade, a valorização das características locais, o respeito ao meio ambiente são ingredientes de uma mesma receita que dão sustentação à postura de hospitalidade da Pousada Rabo do Lagarto.</p>
-            <p>Nosso objectivo é receber cada hóspede de maneira única, com muita atenção ao charme dos detalhes.</p>
-            <p style="text-align:right">Saiba mais</p>                    
-        </div>
-            <div class="grid6 col3 ">
-            <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-            <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-            </div> 
-        </div>
+        <div id="loft" class="bloco ativo grid9">
+            <div class="fundo-suite"><a class="fancybox" rel="pousada" href="{% static "img/suite/suite.jpg" %}"><img src="{% static "img/suite/suite.low.jpg" %}" width="728px" /></a></div>
+            <div class="sub-blocos">
+                <div class="grid4 col2 subbloco">
+                    <p>VÓ CHICA</p>
+                    <p>Suíte em andar superior, com quarto amplo, integrado com sala, ambiente da lareira e banheiro com ofurô.  Varanda com rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD estéreo, DVD, acesso à internet, edredon de pluma de ganso, lençóis e toalhas  de algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, frigobar, secador de cabelo. </p>
+                    <p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda, do Box e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p>
+                    <p>Queda d´água  do Rio Jucu no fundo da suíte. Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
 
+                    <br>
+                    <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
+                    <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
+                    <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
+                    <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
+                </div>
+            </div>
+        </div>
 
 
     </div>
 </div>
 </div>
-<script>
-var getData = parseURLParams(window.location);
-   if 
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox({maxWidth:720});
+       
+        menu_com_fade("area-suites","h2");
+    
+	});
 </script>
 
 

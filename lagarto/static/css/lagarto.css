@@ -156,7 +156,7 @@ div.suites div.menu-lateral h2 { margin-bottom:0px;}
 div.menu-lateral h2.ativo, div.menu-lateral li.ativo{ color:#ff9933;}
 
 div.pousada div.col2 p { font-family:"HelveticaNeue"; font-size:11px;line-height:14px; text-align:justify;color:#999;margin-bottom:15px;}
-div.pousada div.col3 a img {width:53px; height:53px; border:none; }
+div.pousada div.col3 a img, div.subbloco img{width:53px; height:53px; border:none; }
 div.pousada div.col3 a { display:block;float:left; margin:0px 8px 8px 0px;}
 
 
@@ -202,4 +202,38 @@ border-radius: 5px;
     -webkit-box-shadow: 0 0 10px 2px #ccc;
     box-shadow: 0 0 10px 2px #ccc;
 }
+
+.fundo-suite img {position:relative; top:-61px;width:742px;height:564px;}
+.fundo-suite { height:564px; }
+.sub-blocos {position:relative; top:-564px;}
+#area-suites div.bloco { height:503px;float:left;}
+#area-suites div.subbloco {
+   position:relative; 
+   z-index:100;
+   width:290px;
+}
+#area-suites div.subbloco p {
+    font-family: Helvetica;
+    font-style:oblique;
+    font-size:12px;
+    text-align:justify;
+    color:#ccc;
+}
+    
+#area-suites div.subbloco:before
+{
+   content: "";
+   display: block;
+   position: absolute;
+   top:-61px;
+   left:-30px;
+   width: 350px;
+   height:564px;
+   background:black;
+   z-index:-1;
+-moz-opacity: 0.50;
+opacity: 0.50;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);   
+}
+
 
