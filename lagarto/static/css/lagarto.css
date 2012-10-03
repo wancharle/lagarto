@@ -92,9 +92,9 @@ div.menu { text-align:left;}
 div.menu ul {float:right}
 div.submenu ul {float:none}
 
-div.menu li{  font-family:TrajanPro; padding:0px 10px;display:block;height:80px;float:left;margin-left:20px;}
+div.menu li{  font-family:TrajanPro; padding:0px 10px;display:block;height:80px;float:left;margin-left:10px;}
 div.menu a { color:#666666;font-size:14px;line-height:40px;display:block;margin-top:20px;}
-div.menu a img{ position:relative;top:5px;margin-right:5px;}
+div.menu a img{ position:relative;top:5px;margin-right:5px;width:40px;}
 div.submenu li{margin-left:10px; margin-right:0px;}
 div.submenu a {color:#000;margin:0px;display:block;line-height:80px;}
 
@@ -153,7 +153,7 @@ div.menu-lateral ul { margin-bottom:20px;}
 div.menu-lateral ul li { font-size:12px;margin-left:15px;line-height:14px; cursor:pointer;}
 div.menu-lateral h2 {line-height:25px;margin-bottom:30px; font-size:16px;cursor:pointer;}
 div.suites div.menu-lateral h2 { margin-bottom:0px;}
-div.menu-lateral h2.ativo, div.menu-lateral li.ativo{ color:#ff9933;}
+div.menu-lateral h2.ativo, div.menu-lateral li.ativo{ color:#ffff99;}
 
 div.pousada div.col2 p { font-family:"HelveticaNeue"; font-size:11px;line-height:14px; text-align:justify;color:#999;margin-bottom:15px;}
 div.pousada div.col3 a img, div.subbloco img{width:53px; height:53px; border:none; }
@@ -203,37 +203,42 @@ border-radius: 5px;
     box-shadow: 0 0 10px 2px #ccc;
 }
 
-.fundo-suite img {position:relative; top:-61px;width:742px;height:564px;}
+.fundo-suite img {position:relative; top:-61px;width:757px;height:563px;}
 .fundo-suite { height:564px; }
 .sub-blocos {position:relative; top:-564px;}
-#area-suites div.bloco { height:503px;float:left;}
+div.suites{overflow:hidden}
+#area-suites div.bloco { height:503px;float:left;margin-left:0px;}
 #area-suites div.subbloco {
    position:relative; 
    z-index:100;
-   width:290px;
+   width:265px;
+   margin-left:20px;
 }
 #area-suites div.subbloco p {
-    font-family: Helvetica;
-    font-style:oblique;
+    font-family: HelveticaNeue;
     font-size:12px;
+    line-height: 14px;
+    margin-bottom:15px;
     text-align:justify;
     color:#ccc;
+    width:225px;
 }
-    
 #area-suites div.subbloco:before
 {
    content: "";
    display: block;
    position: absolute;
    top:-61px;
-   left:-30px;
-   width: 350px;
-   height:564px;
+   left:-20px;
+   width: 265px;
+   height:563px;
    background:black;
    z-index:-1;
--moz-opacity: 0.50;
-opacity: 0.50;
--ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);   
+-moz-opacity: 0.75;
+opacity: 0.75;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=75);   
 }
 
-
+#area-suites div.subbloco img{width:50px;height:50px;margin:0px 2px;}    
+#area-suites div.subbloco p a { color:#cccc99;}
+#loader { width:1440px;height:564px; margin:0 auto; background: url(../img/capa/slider1.low.jpg); }

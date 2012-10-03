@@ -21,52 +21,38 @@
 
         <div class="grid3 first col1 menu-lateral">
             <nav>
-            <h2 class="ativo" data-bloco="loft";>Suíte Loft</h2>
+            <h2 class="ativo" data-bloco="vochica";>Suíte Loft</h2>
                 <ul>
-                <li class="ativo">Vó Chica</li>
-                <li>Zermatt</li>
-                <li>Amadeu</li>
-                <li>Baviera</li>
-                <li>Pomerânea</li>
-                <li>Aymorés</li>
+                <li class="ativo" data-bloco="vochica">Vó Chica</li>
+                <li data-bloco="zermatt">Zermatt</li>
+                <li data-bloco="amadeu">Amadeu</li>
+                <li data-bloco="baviera">Baviera</li>
+                <li data-bloco="pomeranea">Pomerânea</li>
+                <li data-bloco="aymores">Aymorés</li>
                 </ul>
-            <h2 data-bloco="studio">Suíte Estúdio</h2>
+            <h2 data-bloco="piazza">Suíte Estúdio</h2>
                 <ul>
-                <li>Piazza Navona</li>
-                <li>Mosteiro dos Jerónimos</li>
-                <li>Bruges</li>
-                <li>Rembrandt </li>
-                <li>Maria Antonieta</li>
+                <li data-bloco="piazza">Piazza Navona</li>
+                <li data-bloco="mosteiro">Mosteiro dos Jerónimos</li>
+                <li data-bloco="bruges">Bruges</li>
+                <li data-bloco="rembrandt">Rembrandt </li>
+                <li data-bloco="antonieta">Maria Antonieta</li>
                 </ul>
-            <h2 data-bloco="projeto-ambiental">Suíte Confort</h2>
+            <h2 data-bloco="douro">Suíte Confort</h2>
                 <ul>
-                <li>D´Ouro</li>
-                <li>São Paulim</li>
-                <li>Carrara</li>
-                <li>Provence</li>
-                <li>Mamma Amalfi</li>
-                <li>Toscana</li>
+                <li data-bloco="douro">D´Ouro</li>
+                <li data-bloco="saopaulin">São Paulim</li>
+                <li data-bloco="carrara">Carrara</li>
+                <li data-bloco="provence">Provence</li>
+                <li data-bloco="mamma">Mamma Amalfi</li>
+                <li data-bloco="toscana">Toscana</li>
                 </ul>
            </nav>
         </div>
 
-        <div id="loft" class="bloco ativo grid9">
-            <div class="fundo-suite"><a class="fancybox" rel="pousada" href="{% static "img/suite/suite.jpg" %}"><img src="{% static "img/suite/suite.low.jpg" %}" width="728px" /></a></div>
-            <div class="sub-blocos">
-                <div class="grid4 col2 subbloco">
-                    <p>VÓ CHICA</p>
-                    <p>Suíte em andar superior, com quarto amplo, integrado com sala, ambiente da lareira e banheiro com ofurô.  Varanda com rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD estéreo, DVD, acesso à internet, edredon de pluma de ganso, lençóis e toalhas  de algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, frigobar, secador de cabelo. </p>
-                    <p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda, do Box e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p>
-                    <p>Queda d´água  do Rio Jucu no fundo da suíte. Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
+      {% include "lagarto/suites/vochica.html" %}
+      {% include "lagarto/suites/zermatt.html" %}
 
-                    <br>
-                    <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-                    <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-                    <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-                    <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-                </div>
-            </div>
-        </div>
 
 
     </div>
@@ -77,7 +63,8 @@
 	$(document).ready(function() {
 		$(".fancybox").fancybox({maxWidth:720});
        
-        menu_com_fade("area-suites","h2");
+        menu_com_fade_suites("area-suites","h2");
+        menu_com_fade_suites("area-suites","li");
     
 	});
 </script>
