@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 <div id="zermatt" class="bloco grid9">
-            <div class="fundo-suite"><a  href="javascript:$('#gal-zermatt').click();"><img src="{% static "img/suites/zermatt/foto1.jpg" %}" width="728px" /></a></div>
+            <div class="fundo-suite"><a  href="#" onclick="javascript:$('#gal-zermatt').click();return false;"><img src="{% static "img/suites/zermatt/foto1.jpg" %}" width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
                     <p>Zermatt</p>
@@ -9,7 +9,7 @@
                     <p>Vista para a Pedra Azul e Pedra das Flores a partir da varanda, do Box e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p>
                     <p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
                     </p>
-                    <p>
+                     <p class="thumbs">
                         <a class="fancybox" rel="zermatt" id="gal-zermatt" title="Suíte Loft Zermatt" href="{% static "img/suites/zermatt/foto1.jpg" %}"><img src="{% static "img/suites/zermatt/thumb1.jpg" %}"></a>
                         <a class="fancybox" rel="zermatt" title="Suíte Loft Zermatt - a Pedra Azul fica aí na frente do ofurô!" href="{% static "img/suites/zermatt/foto3.jpg" %}"><img src="{% static "img/suites/zermatt/thumb3.jpg" %}"></a>
                         <a class="fancybox first" rel="zermatt" title="Suíte Loft Zermatt" href="{% static "img/suites/zermatt/foto2.jpg" %}"><img src="{% static "img/suites/zermatt/thumb2.jpg" %}"></a>

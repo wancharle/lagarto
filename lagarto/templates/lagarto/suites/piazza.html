@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<div id="piazza" class="bloco grid9">
+            <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-piazza').click();return false;"><img src="{% static "img/suites/piazza/foto2.jpeg" %}" width="728px" /></a></div>
+            <div class="sub-blocos">
+                <div class="grid4 col2 subbloco">
+
+                    <p>Piazza Navona</p>
+                    <p>
+                    Suíte com quatro cômodos: saleta para televisão, varanda, quarto e amplo banheiro. Equipada
+                    com cama de casal Queen size, televisão, edredon de pluma de ganso, lençóis e toalhas em
+                    algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, roupão masculino
+                    e feminino e secador de cabelos. Biblioteca de DVD disponível para uso imediato ou através
+                    de reserva. Lareira reservada para o quarto, posicionado de frente para enormes janelas, do sofá
+                    é difícil deixar de contemplar a Pedra Azul. A varanda, no quarto, é equipada com rede, duas
+                    poltronas e uma mesinha para um charmoso drink à noite, observando as estrelas.</p>
+                    <p>Já na reserva é possível encomendar um coquetel privé para esse momento, que será levado ao quarto no momento desejado</p>
+
+
+                    <p class="thumbs">
+                    <a class="fancybox" rel="piazza"  title="Suíte Estúdio Piazza Navona-a lareira está na saleta "  href="{% static "img/suites/piazza/foto1.jpeg" %}"><img src="{% static "img/suites/piazza/thumb1.jpg" %}"></a>
+                    <a class="fancybox" rel="piazza" id="gal-piazza" title="Suíte Estúdio Piazza Navona-poltronas e mesinha recicladas"  href="{% static "img/suites/piazza/foto2.jpeg" %}"><img src="{% static "img/suites/piazza/thumb2.jpg" %}"></a>
+                    <a class="fancybox first" rel="piazza" title="Piazza Navona-a Pedra Azul está em frente a essa cadeira da varanda!"  href="{% static "img/suites/piazza/foto3.jpeg" %}"><img src="{% static "img/suites/piazza/thumb3.jpg" %}"></a>
+                    <a class="fancybox" rel="piazza" title="Suíte Estúdio Piazza Navona-veja o tamanho e o conforto do banheiro"  href="{% static "img/suites/piazza/foto4.jpeg" %}"><img src="{% static "img/suites/piazza/thumb4.jpg" %}"></a>
+                    </p>
+
+                    <p style="text-align:right;margin-bottom:10px;"><a href="#" onclick="toogle_menu('tarifas');return false;">Tarifas</a></p>
+                    <p style="text-align:right"><a href="#" onclick="toogle_menu('reservas');return false;">Disponibilidade</a></p>
+                </div>
+            </div>
+</div>
