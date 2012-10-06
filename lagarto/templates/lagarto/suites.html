@@ -17,7 +17,7 @@
 
 <div class="container">
 <div class="suites">
-    <div class="container" id="area-suites">
+    <div class="container" id="area-suites" style="visibility:hidden">
 
         <div class="grid3 first col1 menu-lateral">
             <nav>
@@ -77,12 +77,19 @@
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox({maxWidth:720});
+	$(window).load(function() {
+	
+       $("#area-suites").css("visibility","visible");
+    	$(".fancybox").fancybox({maxWidth:720});
        
+        var data = parseURLParams(window.location.href);
         menu_com_fade_suites("area-suites","h2");
         menu_com_fade_suites("area-suites","li");
     
+        $("li[data-bloco='"+data["suite"]+"']").click();
+        scroll= false;// impede scroll automatico
+        toogle_menu("tarifas");
+        scroll= true; // link tarifas agora tem scroll
 	});
 </script>
 
