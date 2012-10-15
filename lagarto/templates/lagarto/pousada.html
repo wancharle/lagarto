@@ -25,51 +25,10 @@
             <h2 data-bloco="roteiro-de-charme">ROTEIRO DE CHARME</h2>
         </div>
 
-        <div id="a-pousada" class="bloco ativo">
-        <div class="grid3 col2">
-            <p>A pousada Rabo do Lagarto está instalada em um ambiente de contemplação de grande beleza paisagística e, por isso mesmo foi projetada como uma grande arquibancada de frente para a Pedra Azul.</p>
-            <p>O charme, a sofisticação, privacidade, a valorização das características locais, o respeito ao meio ambiente são ingredientes de uma mesma receita que dão sustentação à postura de hospitalidade da Pousada Rabo do Lagarto.</p>
-            <p>Nosso objectivo é receber cada hóspede de maneira única, com muita atenção ao charme dos detalhes.</p>
-            <p style="text-align:right">Saiba mais</p>                    
-        </div>
-            <div class="grid6 col3 ">
-            <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-            <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-            </div> 
-        </div>
-
-        <div id="bistro" class="bloco">
-        <div class="grid3 col2">
-            <p>O Bistrô Cehz Lagarto, integrado à pousada, é o local para se tomar o melhor café da manhã das montanhas: o café da manhã gourmet.</p>
-            <p>É uma casinha aconchegante, com lareira, muita madeira, uma varanda e um deck na frente para contemplação da mais bela vista da Pedra Azul. </p>
-            <p>A antiga residência dos proprietários agora é um espaço para a melhor refeição do dia: o café da manhã.</p>
-            <p>O Chez Lagarto só serve refeições _ café e jantar - para os hóspedes e convidados dos hóspedes, sob reserva. O cardáppio é exclusivo do final de semana, mudando sempre, sazonal, com o frescor das folhas e especiarias colhidas na horta orgânica. As refeições serão servidas dentro ou fora do Bistrô, no deck em frente, sob as árvores ou junto à caichoeira, conforme estação do ano e desejo do hóspede.</p>
-            <p>Além disso, o hóspede poderá convidar seus amigos e fazer seu próprio almoço gourmet na cozinha, com reserva do espaço que, nesse dia é fechado só para uso do grupo de convidados.</p>
-            <p style="text-align:right">Saiba mais</p>                    
-        </div>
-            <div class="grid6 col3 ">
-            <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-            <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-            </div>
-        </div>
-
-        <div id="projeto-ambiental" class="bloco">
-        <div class="grid3 col2">
-          <p>Visando a preservação do entorno do Parque da Pedra Azul, a pousada consultou o código de conduta da Assiciação Roteiros de Charme e o Plano de Manejo do Parque da Pedra Azul, elaborado pelo PNUD/CEPEMAR, para que a consrução fosse feita nos moldes adequados, sugerido por essas entidades.</p>
-          <p style="text-align:right">Saiba mais</p>                    
-        </div>
-             <div class="grid6 col3 ">
-            <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-            <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-            </div>
-        </div>
-
+        {% include "lagarto/pousada/a-pousada.html" %} 
+        {% include "lagarto/pousada/bistro.html" %} 
+        {% include "lagarto/pousada/projeto-ambiental.html" %} 
+           
         <div id="roteiro-de-charme" class="bloco">
         <div class="grid3 col2">
             <p>Identifica todos hotéis, pousadas e refúgios ecológicos durante o ano de seu ingresso na Associação.</p>
@@ -78,13 +37,6 @@
             <p>É uma proposta condizente com produtos referidos de forma variada como "luxury", "thematic hotels", "wellness", "boutique hotels" ou ainda que pratiquem uma hotelaria que alia os princípios de "fair trade" , “slow food” e do trade internacional (ética e responsabilidade social).</p>
           
             <p style="text-align:right">Saiba mais</p>                    
-        </div>
-            <div class="grid6 col3 ">
-            <a class="fancybox" rel="pousada" title="legenda 1" href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb1.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 2 foto GRANDE" href="{% static "img/capa/slider2.jpg" %}"><img src="{% static "img/pousada/thumb2.jpg" %}"></a>
-            <a class="fancybox first" rel="pousada" title="legenda 3 "href="{% static "img/tarifas/foto1.jpg" %}"><img src="{% static "img/pousada/thumb3.jpg" %}"></a>
-            <a class="fancybox" rel="pousada" title="legenda 4 foto GRANDE" href="{% static "img/capa/slider4.jpg" %}"><img src="{% static "img/pousada/thumb4.jpg" %}"></a>
-            </div>
         </div>
 
        
@@ -101,7 +53,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(".fancybox").fancybox({maxWidth:720});
+		$(".fancybox").fancybox({maxWidth:1024});
        
         menu_com_fade("area-pousada","h2");
     

@@ -145,10 +145,12 @@ div.tarifas div.col2 div p.green {color:#33CC33 ; float:left;}
 div.tarifas div.col2 div p.green a { color:#33cc33; }
 
 
-div.pousada,div.suites { width:1440px;height:564px;background: url("../img/pousada/fundo.jpg"); position:relative;left:-231px;}
-div.pousada div.container, div.suites div.container {padding-top:61px; }
+div.pousada,div.suites, div.estrutura { width:1440px;height:564px;background: url("../img/pousada/fundo.jpg"); position:relative;left:-231px;}
+div.pousada div.container,
+div.suites div.container,
+div.estrutura div.container {padding-top:61px; }
 
-div.menu-lateral { font-family:TrajanPro;color:white; }
+div.menu-lateral { font-family:TrajanPro;color:#ddd;}
 div.menu-lateral ul { margin-bottom:20px;}
 div.menu-lateral ul li { font-size:12px;margin-left:15px;line-height:14px; cursor:pointer;}
 div.menu-lateral h2 {line-height:25px;margin-bottom:30px; font-size:16px;cursor:pointer;}
@@ -203,28 +205,42 @@ border-radius: 5px;
     box-shadow: 0 0 10px 2px #ccc;
 }
 
-.fundo-suite img {position:relative; top:-61px;width:757px;height:563px;}
+.fundo-suite img,
+.fundo-estrutura img{position:relative; top:-61px;width:757px;height:563px;}
+.fundo-pousada img {position:relative; top:0px;width:1440px;left:-450px;height:563px;}
+.fundo-estrutura img{ width:514px;left:-50px;}
+.fundo-pousada { width: 1440px; overflow :hidden;position:relative; top:-61px; }
+.fundo-pousada,
 .fundo-suite { height:564px; }
 .sub-blocos {position:relative; top:-564px;}
-div.suites{overflow:hidden}
-#area-suites div.bloco { height:503px;float:left;margin-left:0px;}
-#area-suites div.subbloco {
+div.suites {overflow:hidden}
+#area-pousada div.bloco,
+#area-suites div.bloco,
+#area-estrutura div.bloco{ height:503px;float:left;margin-left:0px;}
+
+#area-pousada h2, #area-estrutura h2 {font-size:14px;}
+#area-pousada div.subbloco,
+#area-suites div.subbloco,
+#area-estrutura div.subbloco{
    position:relative; 
    z-index:100;
    width:265px;
-   margin-left:20px;
+   margin-left:15px;
 }
-#area-suites div.subbloco p {
+#area-estrutura div.subbloco { margin:0px;margin-right:5px;}
+#area-pousada div.subbloco p,
+#area-suites div.subbloco p,
+#area-estrutura div.subbloco p{
     font-family: HelveticaNeue;
-    font-size:12px;
+    font-size:11px;
     line-height: 14px;
     margin-bottom:15px;
     text-align:justify;
     color:#ccc;
     width:225px;
 }
-#area-suites div.subbloco:before
-{
+#area-suites div.subbloco:before,
+#area-pousada div.subbloco:before{
    content: "";
    display: block;
    position: absolute;
