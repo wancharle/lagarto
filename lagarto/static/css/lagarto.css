@@ -230,7 +230,8 @@ div.suites {overflow:hidden}
 #area-estrutura div.subbloco { margin:0px;margin-right:5px;}
 #area-pousada div.subbloco p,
 #area-suites div.subbloco p,
-#area-estrutura div.subbloco p{
+#area-estrutura div.subbloco p,
+#area-localizacao div.subbloco p{
     font-family: HelveticaNeue;
     font-size:11px;
     line-height: 14px;
@@ -259,3 +260,5 @@ opacity: 0.75;
 #area-suites div.subbloco ul li { display:inline}
 #area-suites div.subbloco p.thumbs { width:235px }
 #area-suites div.subbloco p a { color:#cccc99;}
+
+#area-localizacao div.col2 {width:250px;}
