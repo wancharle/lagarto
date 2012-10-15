@@ -100,8 +100,8 @@ div.submenu a {color:#000;margin:0px;display:block;line-height:80px;}
 
 p.login { font-size:12px; font-family:"Helvetica"; font-weight:oblique;text-align:right; }
 p.login a {color:#ccc;}
-p.flag {text-align:right;padding:20px 0px;height:40px;float:right;}
-p.flag a {line-height:40px;}
+.flag {text-align:right;padding:20px 0px;height:40px;float:right;}
+.flag a {line-height:40px;}
 
 
 div.cabecalho {
