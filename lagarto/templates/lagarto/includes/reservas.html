@@ -28,17 +28,14 @@
             <option value="Suíte Confort">Suíte Confort</option>
         </select>
 
-        <label for="id_periodo">Periodo:</label>
-        <select id="id_periodo" name="periodo">
-            <option value="????">???????</option>
-        </select>
-
+        <label for="periodo">Periodo:</label>
+        <input type="textbox" id="periodo" name="periodo" />
         <label for="id_email">Email:</label>
-        <input type="textbox" id="id_email" name="email"/>
+        <input type="textbox" id="id_email" name="email" />
 
 
         <label for="id_telefone">Telefone:</label>
-        <input type="textbox" id="id_telefone" name="telefone"/>
+        <input type="textbox" id="id_telefone" name="telefone" />
         
         <p class="botao">rabodolagarto@hotmail.com <input type="submit" value="enviar"></p>
 
@@ -53,5 +50,9 @@
             $('#formReservas').ajaxForm(function() { 
                 alert("teste!"); 
             }); 
-        }); 
+
+            $("#periodo").datepick({multiSelect:999}); 
+            
+            
+            }); 
     </script> 
