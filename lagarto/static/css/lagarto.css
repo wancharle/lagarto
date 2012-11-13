@@ -216,12 +216,14 @@ border-radius: 5px;
 div.suites {overflow:hidden}
 #area-pousada div.bloco,
 #area-suites div.bloco,
-#area-estrutura div.bloco{ height:503px;float:left;margin-left:0px;}
+#area-estrutura div.bloco,
+#area-localizacao div.bloco{ height:503px;float:left;margin-left:0px;}
 
 #area-pousada h2, #area-estrutura h2 {font-size:14px;}
 #area-pousada div.subbloco,
 #area-suites div.subbloco,
-#area-estrutura div.subbloco{
+#area-estrutura div.subbloco,
+#area-localizacao div.subbloco{
    position:relative; 
    z-index:100;
    width:265px;
@@ -241,7 +243,8 @@ div.suites {overflow:hidden}
     width:225px;
 }
 #area-suites div.subbloco:before,
-#area-pousada div.subbloco:before{
+#area-pousada div.subbloco:before,
+#area-localizacao div.subbloco2:before{
    content: "";
    display: block;
    position: absolute;

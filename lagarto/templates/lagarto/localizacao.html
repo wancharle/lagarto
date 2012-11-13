@@ -9,10 +9,17 @@
 <div class="estrutura">
     <div class="container" id="area-localizacao">
         <div class="grid3 first col1 menu-lateral">
+            <h2 data-bloco="regiao">A REGIÃO</h2>
             <h2 class="ativo" data-bloco="localizacao">LOCALIZAÇÃO</h2>
             <h2 data-bloco="transfer">TRANSFER</h2>
+
+            <div style="margin-top:150px">
+            {% include "lagarto/includes/climatempo.html" %}
+            </div>
+
         </div>
 
+        {% include "lagarto/localizacao/regiao.html" %} 
         {% include "lagarto/localizacao/local.html" %} 
         {% include "lagarto/localizacao/transfer.html" %} 
            
