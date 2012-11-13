@@ -1,7 +1,8 @@
-{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 <div id="mamma" class="bloco grid9">
-            <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-mamma').click();return false;"><img src="{% static "img/suites/mamma/foto1.jpeg" %}" width="728px" /></a></div>
+            <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-mamma').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/mamma/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
 <p>Mamma Amalfi</p>
@@ -12,9 +13,9 @@ cruz.</p>
 <p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no
 momento desejado.</p>
                     <p class="thumbs">
-                    <a class="fancybox" rel="mamma" id="gal-mamma" title="Mamma Amalfi - são 6 travesseiros, sim!"  href="{% static "img/suites/mamma/foto1.jpeg" %}"><img src="{% static "img/suites/mamma/thumb1.jpg" %}"></a>
-                    <a class="fancybox" rel="mamma" title="Suíte Comfort Mamma Amalfi - cúpula de abajour feita por nós"  href="{% static "img/suites/mamma/foto2.jpeg" %}"><img src="{% static "img/suites/mamma/thumb2.jpg" %}"></a>
-                    <a class="fancybox" rel="mamma" title="Mamma Amalfi - mesinha chipandale reciclada, de brechó e colcha de crochê "  href="{% static "img/suites/mamma/foto3.jpeg" %}"><img src="{% static "img/suites/mamma/thumb3.jpg" %}"></a>
+                    <a class="fancybox" rel="mamma" id="gal-mamma" title="Mamma Amalfi - são 6 travesseiros, sim!"  href="{{ STATIC_PREFIX }}img/suites/mamma/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb1.jpg" ></a>
+                    <a class="fancybox" rel="mamma" title="Suíte Comfort Mamma Amalfi - cúpula de abajour feita por nós"  href="{{ STATIC_PREFIX }}img/suites/mamma/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb2.jpg" ></a>
+                    <a class="fancybox" rel="mamma" title="Mamma Amalfi - mesinha chipandale reciclada, de brechó e colcha de crochê "  href="{{ STATIC_PREFIX }}img/suites/mamma/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb3.jpg" ></a>
                     </p>
 
                     <p style="text-align:right;margin-bottom:10px;"><a href="#" onclick="toogle_menu('tarifas');return false;">Tarifas</a></p>

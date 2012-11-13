@@ -1,7 +1,8 @@
-{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 <div id="amadeus" class="bloco grid9">
-            <div class="fundo-suite"><a  href="#" onclick="javascript:$('#gal-amadeus').click();return false;"><img src="{% static "img/suites/amadeus/foto1.jpeg" %}" width="728px" /></a></div>
+            <div class="fundo-suite"><a  href="#" onclick="javascript:$('#gal-amadeus').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/amadeus/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
                         <p>Amadeus</p>
@@ -17,10 +18,10 @@
                         momento desejado.</p>
                         
                         <p class="thumbs">
-                        <a class="fancybox" rel="amadeus" id="gal-amadeus" title="Suíte Loft Amadeus" href="{% static "img/suites/amadeus/foto1.jpeg" %}"><img src="{% static "img/suites/amadeus/thumb1.jpg" %}"></a>
-                        <a class="fancybox" rel="amadeus" title="Suíte Loft Amadeus" href="{% static "img/suites/amadeus/foto3.jpeg" %}"><img src="{% static "img/suites/amadeus/thumb3.jpg" %}"></a>
-                        <a class="fancybox first" rel="amadeus" title="Suíte Loft Amadeus" href="{% static "img/suites/amadeus/foto2.jpeg" %}"><img src="{% static "img/suites/amadeus/thumb2.jpg" %}"></a>
-                        <a class="fancybox" rel="amadeus" title="Suíte Loft Amadeus - a Pedra Azul fica aí na frente da hidro!" href="{% static "img/suites/amadeus/foto4.jpeg" %}"><img src="{% static "img/suites/amadeus/thumb4.jpg" %}"></a>
+                        <a class="fancybox" rel="amadeus" id="gal-amadeus" title="Suíte Loft Amadeus" href="{{ STATIC_PREFIX }}img/suites/amadeus/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/amadeus/thumb1.jpg" ></a>
+                        <a class="fancybox" rel="amadeus" title="Suíte Loft Amadeus" href="{{ STATIC_PREFIX }}img/suites/amadeus/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/amadeus/thumb3.jpg" ></a>
+                        <a class="fancybox first" rel="amadeus" title="Suíte Loft Amadeus" href="{{ STATIC_PREFIX }}img/suites/amadeus/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/amadeus/thumb2.jpg" ></a>
+                        <a class="fancybox" rel="amadeus" title="Suíte Loft Amadeus - a Pedra Azul fica aí na frente da hidro!" href="{{ STATIC_PREFIX }}img/suites/amadeus/foto4.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/amadeus/thumb4.jpg" ></a>
                     </p>
 
                     <p style="text-align:right;margin-bottom:10px;"><a href="#" onclick="toogle_menu('tarifas');return false;">Tarifas</a></p>
