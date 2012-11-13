@@ -1,5 +1,5 @@
-{% load staticfiles %}
-
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 <div id="servicos" class="grid9 bloco" > 
     <div class="grid4 col2 subbloco">
@@ -11,5 +11,5 @@
         <p>Refeições com chefe de cozinha em dedicação exclusiva, se solicitado previamente, em qualquer apartamento da pousada;</p>
         <p>Serviços de transfer (agendar previamente);</p>
     </div>
-    <div class="fundo-estrutura grid5"><a class="fancybox" href="{% static "img/estrutura/foto2.jpg" %}" rel="gal-servicos"><img src="{% static "img/estrutura/foto2.jpg" %}"  /></a></div>
+    <div class="fundo-estrutura grid5"><a class="fancybox" href="{{ STATIC_PREFIX }}img/estrutura/foto2.jpg"  rel="gal-servicos"><img src="{{ STATIC_PREFIX }}img/estrutura/foto2.jpg"   /></a></div>
 </div>

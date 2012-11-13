@@ -1,14 +1,16 @@
 {% extends "lagarto/index.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block css %}
+{% get_static_prefix as STATIC_PREFIX %}
 {{ block.super }}
-    <link rel="stylesheet" href="{% static "fancybox/jquery.fancybox.css" %}" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}fancybox/jquery.fancybox.css"  type="text/css" media="screen" charset="utf-8">
 {% endblock %}
 
 {% block javascript %}
+{% get_static_prefix as STATIC_PREFIX %}
 {{ block.super }}
-        <script src="{% static "fancybox/jquery.fancybox.js" %}" type="text/javascript"></script>
+        <script src="{{ STATIC_PREFIX }}fancybox/jquery.fancybox.js"  type="text/javascript"></script>
 {% endblock %}
 
 {% block menu-selecionado %}menu-pousada{% endblock %}

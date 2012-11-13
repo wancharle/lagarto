@@ -1,5 +1,5 @@
-{% load staticfiles %}
-
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 <div id="localizacao" class="grid9 bloco ativo" > 
           <div class="grid4 col2 first subbloco">
@@ -12,9 +12,9 @@
   
    <div class="grid5" style="margin-left:20px">
 <div style="background-color:#ccc; padding:10px;padding-bottom:3px;width:300px;">
-<iframe width="300" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=d&amp;source=s_d&amp;saddr=Vit%C3%B3ria+-+Esp%C3%ADrito+Santo&amp;daddr=Pousada+Rabo+do+Lagarto,+Domingos+Martins+-+ES,+29278-000&amp;hl=pt-BR&amp;geocode=FSADyv4dOQuZ_SmbUQFXHxi4ADHVi5s6dl3kuA%3BFdKWyP4dH5KN_SH9mAQ8ygtKSimh1aR9O6K5ADH9mAQ8ygtKSg&amp;aq=0&amp;oq=Vitoria&amp;sll=-20.40642,-41.053677&amp;sspn=0.125976,0.228825&amp;t=m&amp;mra=ls&amp;ie=UTF8&amp;ll=-20.375527,-40.682373&amp;spn=1.287342,1.647949&amp;z=8&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.br/maps?f=d&amp;source=embed&amp;saddr=Vit%C3%B3ria+-+Esp%C3%ADrito+Santo&amp;daddr=Pousada+Rabo+do+Lagarto,+Domingos+Martins+-+ES,+29278-000&amp;hl=pt-BR&amp;geocode=FSADyv4dOQuZ_SmbUQFXHxi4ADHVi5s6dl3kuA%3BFdKWyP4dH5KN_SH9mAQ8ygtKSimh1aR9O6K5ADH9mAQ8ygtKSg&amp;aq=0&amp;oq=Vitoria&amp;sll=-20.40642,-41.053677&amp;sspn=0.125976,0.228825&amp;t=m&amp;mra=ls&amp;ie=UTF8&amp;ll=-20.375527,-40.682373&amp;spn=1.287342,1.647949&amp;z=8" style="float:right;color:black;text-align:right">Amplie o mapa</a></small><div class="clear"></div>
+<iframe width="300" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=d&amp;source=s_d&amp;saddr=Vit%C3%B3ria+-+Esp%C3%ADrito+Santo&amp;daddr=Pousada+Rabo+do+Lagarto,+Domingos+Martins+-+ES,+29278-000&amp;hl=pt-BR&amp;geocode=FSADyv4dOQuZ_SmbUQFXHxi4ADHVi5s6dl3kuA%3BFdKWyP4dH5KN_SH9mAQ8ygtKSimh1aR9O6K5ADH9mAQ8ygtKSg&amp;aq=0&amp;oq=Vitoria&amp;sll=-20.40642,-41.053677&amp;sspn=0.125976,0.228825&amp;t=m&amp;mra=ls&amp;ie=UTF8&amp;ll=-20.375527,-40.682373&amp;spn=1.287342,1.647949&amp;z=8&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.br/maps?f=d&amp;source=embed&amp;saddr=Vit%C3%B3ria+-+Esp%C3%ADrito+Santo&amp;daddr=Pousada+Rabo+do+Lagarto,+Domingos+Martins+-+ES,+29278-000&amp;hl=pt-BR&amp;geocode=FSADyv4dOQuZ_SmbUQFXHxi4ADHVi5s6dl3kuA%3BFdKWyP4dH5KN_SH9mAQ8ygtKSimh1aR9O6K5ADH9mAQ8ygtKSg&amp;aq=0&amp;oq=Vitoria&amp;sll=-20.40642,-41.053677&amp;sspn=0.125976,0.228825&amp;t=m&amp;mra=ls&amp;ie=UTF8&amp;ll=-20.375527,-40.682373&amp;spn=1.287342,1.647949&amp;z=8" style="float:right;color:black;text-align:right" target="_blank">Amplie o mapa</a></small><div class="clear"></div>
 </div>
-<p style="color:#ccc; width:320px; text-align:right;margin-top:20px;"><a target="_blank" style="color:#ccc" href="{% static "img/mapa.jpg" %}">download do mapa ilustrado</a></p>
+<p style="color:#ccc; width:320px; text-align:right;margin-top:20px;"><a target="_blank" style="color:#ccc" href="{{ STATIC_PREFIX }}img/mapa.jpg" >download do mapa ilustrado</a></p>
 
 </div>
 </div>

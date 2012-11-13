@@ -1,4 +1,6 @@
-{%  load staticfiles  %}
+{%  load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
 <div class="contato reserva1" id="contato" style="display:none;">
     <div class="col1 grid6 first">
         <div class="borda-sombreada"> 
@@ -8,7 +10,7 @@
         </div>
         <div class="divulgacao">
             <p>Marerial de Divulgação e clipping da pousada</p>
-            <a href=""><img src="{% static "img/pdf.png" %}" height="20px" width="20px" /> Clipping e Divulgação.pdf</a>
+            <a href=""><img src="{{ STATIC_PREFIX }}img/pdf.png"  height="20px" width="20px" /> Clipping e Divulgação.pdf</a>
             <p>download</p>
         </div>
     </div>

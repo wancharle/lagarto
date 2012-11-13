@@ -1,5 +1,5 @@
-{% load staticfiles %}
-
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 
 <div id="estrutura" class="grid9 bloco ativo" > 
           <div class="grid4 first col2 subbloco">
@@ -17,6 +17,6 @@
    
       
         </div>
-        <div class="fundo-estrutura grid5"><a class="fancybox" title="Estrutura" href="{% static "img/estrutura/foto1.jpg" %}" rel="gal-estrutura"><img src="{% static "img/estrutura/foto1.jpg" %}" /></a></div>
+        <div class="fundo-estrutura grid5"><a class="fancybox" title="Estrutura" href="{{ STATIC_PREFIX }}img/estrutura/foto1.jpg"  rel="gal-estrutura"><img src="{{ STATIC_PREFIX }}img/estrutura/foto1.jpg"  /></a></div>
     
 </div>
