@@ -6,7 +6,7 @@
         <div class="images" id="images">
 
                 <div class="grupo">
-                    <img src="{{ STATIC_PREFIX }}img/capa/slider1.jpg"  /> 
+                    <img src="{{ STATIC_PREFIX }}img/capa/slider1.jpg"  />
                     <div class="leg" id="leg1">
                         <div class="caixa opa50"> </div>
                         <p class="chamada">Sofisticação e Luxo</p>
@@ -48,6 +48,10 @@
 </div>
 
 <script>
+var slide_n=0;
+function onAfter1(curr,next,opts) {
+        slide_n=opts.currSlide + 1;
+}
 $(window).load(function() {
   // Handler for .ready() called.
     $("#slide").css("visibility","visible");
@@ -56,10 +60,17 @@ $(window).load(function() {
         fx:'fade',
         timeout: 5000,
         next:'#next',
-        prev:'#prev'
+        prev:'#prev',
+            after: onAfter1
     }    
     );
 
+    $("div.botoes").click(function(){ 
+        if (slide_n == 3 ) window.location = "/pousada/";
+        if (slide_n == 1 ) window.location = "/suites/";
+        if (slide_n == 4 ) window.location = "/estrutura/";
+        if (slide_n == 2 ) window.location = "/localizacao/";
+        });
 });
 </script>
 
