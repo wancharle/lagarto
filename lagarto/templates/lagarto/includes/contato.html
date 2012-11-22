@@ -16,21 +16,26 @@
     </div>
    
     <div class="col2 grid6">
-        <form id="formContato">
+        <form id="formContato" action="/formcontato/" method="POST">
 
-        <label for="id_nome">Nome:</label>
-        <input type="textbox" id="id_nome" name="nome" />
-           
-        <label for="id_datanascimento">Data Nascimento:</label>
-        <input type="textbox" id="id_datanascimento" name="datanascimento" />
+ {% csrf_token %}
+        <p class="error nome" style="display:none">Informe seu nome.</p>
+        <label for="contNome">Nome:</label>
+        <input type="textbox" id="contNome" name="nome" />
 
-        <label for="id_email">Email:</label>
-        <input type="textbox" id="id_email" name="email" />
+        <p class="error data" style="display:none">Informe sua data de nascimento.</p>
+        <label for="contData">Data Nascimento:</label>
+        <input type="textbox" id="contData" name="data" />
 
+        <p class="error email" style="display:none">Informe seu email.</p>
+        <label for="contEmail">Email:</label>
+        <input type="textbox" id="contEmail" name="email" />
 
-        <label for="id_telefone">Telefone:</label>
-        <input type="textbox" id="id_telefone" name="telefone" />
+        <p class="error telefone" style="display:none">Informe seu telefone.</p>
+        <label for="contTelefone">Telefone:</label>
+        <input type="textbox" id="contTelefone" name="telefone" />
         
+        <p class="error mensagem" style="display:none">Informe sua mensagem.</p>
         <label for="id_mensagem">Mensagem:</label>
         <textarea id="id_mensagem" name="mensagem" class="borda-sombreada" /></textarea> 
         <p class="botao"><input type="submit" value="enviar"></p>
@@ -42,9 +47,80 @@
 
     <script> 
         // wait for the DOM to be loaded 
+function valida_contato(){
+            $('.error').hide();  
+            var name = $("#contNome").val();  
+            if (name == "") {  
+            $("#formContato p.nome").show();  
+            $("#contNome").focus();  
+                return false;  
+            }  
+
+            var data = $("#contData").val();  
+            if (data == "") {  
+                $("#formContato p.data").show();  
+                $("#contData").focus();  
+            return false;  
+            }
+
+            var email = $("#contEmail").val();  
+            if (email == "") {  
+            $("#formContato p.email").show();  
+            $("#contEmail").focus();  
+            return false;  
+            }  
+        
+            var phone = $("#contTelefone").val();  
+            if (phone == "") {  
+                $("#formContato p.phone").show();  
+                $("#contTelefone").focus();  
+            return false;  
+            }
+ 
+            var periodo = $("#id_mensagem").val();  
+            if (periodo == "") {  
+                $("#formContato p.mensagem").show();  
+                $("#id_mensagem").focus();  
+            return false;  
+            }
+
+
+
+                      
+            return true;
+}
+
+        // wait for the DOM to be loaded 
         $(document).ready(function() { 
-            $('#formContato').ajaxForm(function() { 
-                alert("teste!"); 
-            }); 
-        }); 
+            $('#formContato').ajaxForm({ 
+                beforeSubmit: valida_contato,
+                dataType: "json",
+                success: function(data){
+                    if (data.erro){ 
+                        $(".error").hide();
+                        $("#formContato p.email").show()
+                        $("#contEmail").focus();
+                    }else{
+                        alert(data.message);
+                        window.location="/";
+                    }
+               }
+           }); 
+ 
+
+ 
+            $('#contData').iMask({
+                type : 'fixed'
+                , mask : '99/99/9999'
+            });
+
+            $('#contTelefone').iMask({
+                type : 'fixed'
+                , mask : ' (99) 9999-99999'
+            });
+
+
+
+      }); 
+        
     </script> 

@@ -15,3 +15,5 @@ apache2/logs
 */*/settings/local.py
 */*/settings/local/*
 docs/_build
+*.db
+database/

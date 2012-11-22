@@ -14,18 +14,20 @@
     </div>
    
     <div class="col2 grid6">
-        <form id="formReservas">
-
-        <label for="id_nome">Nome:</label>
-        <input type="textbox" id="id_nome" name="nome" />
+        <form id="formReservas" action="/formreservas/" method="post">
+ {% csrf_token %}
+        <p class="error nome" style="display:none">Informe seu nome.</p>
+        <label for="resNome">Nome:</label>
+        <input type="textbox" id="resNome" name="nome" />
            
-        <label for="id_datanascimento">Data Nascimento:</label>
-        <input type="textbox" id="id_datanascimento" name="datanascimento" />
+        <p class="error data" style="display:none">Informe sua data de nascimento.</p>
+        <label for="resData">Data Nascimento:</label>
+        <input type="textbox" id="resData" name="data" />
 
 
-        <label for="id_suite">Nome da Suíte:</label>
-        <select id="id_suite" name="suite">
-
+        <p class="error suite" style="display:none">Escolha uma suíte.</p>
+        <label for="resSuite">Nome da Suíte:</label>
+        <select id="resSuite" name="suite">
             <option value="">-- Escolha uma suíte --</option>
             <option value="Vó Chica">Vó Chica</option>
             <option value="Zermatt">Zermatt</option>
@@ -46,14 +48,18 @@
             <option value="Toscana">Toscana</option>
         </select>
 
+        <p class="error periodo" style="display:none">Marque os periodos que deseja  reservar.</p>
         <label for="periodo">Periodo:</label>
         <input type="textbox" id="periodo" name="periodo" />
-        <label for="id_email">Email:</label>
-        <input type="textbox" id="id_email" name="email" />
+
+        <p class="error email" style="display:none">Informe seu email.</p>
+        <label for="resEmail">Email:</label>
+        <input type="textbox" id="resEmail" name="email" />
 
 
-        <label for="id_telefone">Telefone:</label>
-        <input type="textbox" id="id_telefone" name="telefone" />
+        <p class="error phone" style="display:none">Informe seu telefone</p>
+        <label for="resTelefone">Telefone:</label>
+        <input type="textbox" id="resTelefone" name="telefone" />
         
         <p class="botao">rabodolagarto@hotmail.com <input type="submit" value="enviar"></p>
 
@@ -63,14 +69,85 @@
 
 
     <script> 
+function valida_reservas(){
+            $('.error').hide();  
+            var name = $("#resNome").val();  
+            if (name == "") {  
+            $("#formReservas p.nome").show();  
+            $("#resNome").focus();  
+                return false;  
+            }  
+
+            var data = $("#resData").val();  
+            if (data == "") {  
+                $("#formReservas p.data").show();  
+                $("#resData").focus();  
+            return false;  
+            }
+
+            var suite = $("#resSuite").val();  
+            if (suite == "") {  
+                $("#formReservas p.suite").show();  
+                $("#resSuite").focus();  
+            return false;  
+            }
+ 
+            var periodo = $("#periodo").val();  
+            if (periodo == "") {  
+                $("#formReservas p.periodo").show();  
+                $("#periodo").focus();  
+            return false;  
+            }
+
+
+            var email = $("#resEmail").val();  
+            if (email == "") {  
+            $("#formReservas p.email").show();  
+            $("#resEmail").focus();  
+            return false;  
+            }  
+        
+            var phone = $("#resTelefone").val();  
+            if (phone == "") {  
+                $("#formReservas p.phone").show();  
+                $("#resTelefone").focus();  
+            return false;  
+            }
+
+                      
+            return true;
+}
+
         // wait for the DOM to be loaded 
         $(document).ready(function() { 
-            $('#formReservas').ajaxForm(function() { 
-                alert("teste!"); 
-            }); 
+            $('#formReservas').ajaxForm({ 
+                beforeSubmit: valida_reservas,
+                dataType: "json",
+                success: function(data){
+                    if (data.erro){ 
+                        $(".error").hide();
+                        $("#formReservas p.email").show()
+                        $("#resEmail").focus();
+                    }else{
+                        alert(data.message);
+                        window.location="/";
+                    }
+               }
+           }); 
 
             $("#periodo").datepick({multiSelect:999}); 
             
-            
+            $('#resData').iMask({
+                type : 'fixed'
+                , mask : '99/99/9999'
+            });
+
+            $('#resTelefone').iMask({
+                type : 'fixed'
+                , mask : ' (99) 9999-99999'
+            });
+
+
+             
             }); 
     </script> 
