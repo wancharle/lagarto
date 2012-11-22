@@ -50,12 +50,12 @@ estados = (
 
 class Mensagem(models.Model):
     campanha = models.ForeignKey(Campanha)
-    email_from = models.CharField(max_length=200,default=u"'MAX DA MATA' <vereador@maxdamata.com.br>")
-    email_responder_para = models.EmailField(max_length=200,default=u"bancodedados@maxdamata.com.br")
+    email_from = models.CharField(max_length=200,default=u"'Pousada Rabo do Lagarto' <pousada@rabodolagarto.com.br>")
+    email_responder_para = models.EmailField(max_length=200,default=u"pousada@rabodolagarto.com.br")
     assunto = models.CharField(max_length=200)
     mensagem = models.TextField()
     mensagem_texto_alternativo= models.TextField()
-    imagem = models.ImageField(upload_to="propaganda/")    
+    imagem = models.ImageField(upload_to="propaganda/",verbose_name="imagem banner")    
     emails_enviados = models.ManyToManyField(Contato,verbose_name=u"destinatários") 
     estado = models.CharField(max_length=2,choices=estados,default='0') # trava de seguranca
     cancelamentos = models.IntegerField(default=0)

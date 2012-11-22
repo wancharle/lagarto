@@ -1,7 +1,5 @@
-#!/usr/local/bin/python2.7
-from django.core.management import setup_environ
-import settings
-setup_environ(settings)
+#!/usr/bin/env python
+from lagarto.settings import local as settings
 
 
 def get_log():
@@ -9,7 +7,7 @@ def get_log():
     import logging
     import logging.handlers
 
-    LOG_FILENAME = '/home/wancharle/webapps/newsletter/logs/crom_jog.log'
+    LOG_FILENAME = '/home/rabodolagarto/logs/crom_jog.log'
 
     # Set up a specific logger with our desired output level
     my_logger = logging.getLogger('Crom_job')
@@ -32,6 +30,7 @@ printlog = get_log()
 
 from newsletter.email_com_imagem import enviar_email
 from newsletter.models import Mensagem, Contato
+from django.http import HttpResponse 
 
 def envia_mensagem():
     msgs = Mensagem.objects.filter(estado='1')
@@ -54,7 +53,7 @@ def envia_mensagem():
     return "Abaixo segue os emails que foram enviados no ultimo minuto:\n{ %s }" % str(lista)
 
    
-
-r= envia_mensagem()
-print r
-printlog.debug(r)
+def executa_cron(request):
+    r= envia_mensagem() 
+    printlog.debug(r)
+    return HttpResponse(r,mimetype="text/plain")

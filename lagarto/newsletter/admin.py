@@ -20,9 +20,9 @@ class CampanhaAdmin(admin.ModelAdmin):
 
 
 class MensagemAdmin(admin.ModelAdmin):
-    exclude= ('emails_enviados',) 
+    exclude= ('emails_enviados','email_responder_para','cancelamentos','problemas','email_from') 
     actions = ('zerar_emails_enviados','testar_mensagem_com_contatos_de_teste')
-    list_display = ('assunto','estado','emails_ja_enviados','emails_com_problema','assinaturas_canceladas')
+    list_display = ('assunto','estado','emails_ja_enviados','emails_com_problema','cancelamentos')
     list_per_page = 20
     def zerar_emails_enviados(self,request,queryset):
         for q in queryset:
@@ -38,7 +38,7 @@ class MensagemAdmin(admin.ModelAdmin):
 
 class ContatoAdmin(admin.ModelAdmin):
     list_filter=('ativo','erro')
-    list_display=('email','ativo','erro')
+    list_display=('nome','email','telefone','data_nascimento','ativo','erro')
     search_fields=('email',)
 
 admin.site.register(Campanha,CampanhaAdmin)
