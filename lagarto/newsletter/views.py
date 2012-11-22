@@ -6,27 +6,16 @@ from django.shortcuts import render_to_response
 from django.utils import  simplejson as json
 
 from newsletter.models import Mensagem, Contato
-from email.mime.text import MIMEText
 import csv
    
 def cancela_newsletter(request,id_msg,id_contato):
     msg = Mensagem.objects.get(id=id_msg)
+    msg.cancelamentos+=1
+    msg.save()
+
     contato = Contato.objects.get(id=id_contato)
     contato.ativo =False
     contato.save()
-    msgRoot = MIMEText("Remova o email abaixo da lista de newsletter:\n%s"% contato.email)
-
-    msgRoot['Subject'] = 'REMOVER :%s' % contato.email
-    msgRoot['From'] = "servidor"
-    msgRoot['To'] = msg.email_responder_para
-    
-    import smtplib
-    smtp = smtplib.SMTP()
-    smtp.connect(msg.campanha.servidor) 
-    smtp.starttls()
-    smtp.login(msg.campanha.login,msg.campanha.senha)
-    smtp.sendmail(msg.email_from, [msg.email_responder_para,], msgRoot.as_string())
-    smtp.quit()
 
     return HttpResponse("<h1>Seu email foi removido da nossa base de dados com sucesso!</h1>")
 
@@ -140,8 +129,8 @@ def formcontato(request):
     telefone = request.POST.get("telefone","")
     data = request.POST.get("data","")
     msg = request.POST.get("mensagem","")
-    message = "Pedido de reserva feito no site rabodolagarto.com.br:\n Nome: %s\n Telefone: %s \n Email: %s \n Data de nascimento: %s\n Mensagem: %s \n " % (nome,telefone, email, data, msg)
-    send_mail('[RESERVA]', message, "reservas@rabodolagarto.com.br" ,[EMAIL_DESTINO], fail_silently=False)    
+    message = "CONTATO \n Nome: %s\n Telefone: %s \n Email: %s \n Data de nascimento: %s\n Mensagem: %s \n " % (nome,telefone, email, data, msg)
+    send_mail('[CONTATO]', message, "contato@rabodolagarto.com.br" ,[EMAIL_DESTINO], fail_silently=False)    
 
     try:
         contato = Contato.objects.get(email=email)

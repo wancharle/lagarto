@@ -9,7 +9,7 @@ TEMPLATE_DEBUG = DEBUG
 #----------------------------------
 TIME_ZONE = 'America/Sao_Paulo'
 LANGUAGE_CODE = 'pt-br'
-SITE_ID = 1
+SITE_ID = 2
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -22,9 +22,10 @@ import sys
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
-MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/wancharle/webapps/media/lagarto/'
-STATIC_URL = '/static/lagarto/'
+MEDIA_URL = 'http://media.rabodolagarto.com.br/'
+STATIC_ROOT = '/home/rabodolagarto/apps_wsgi/lagarto/lagarto/media/static/'
+STATIC_URL = MEDIA_URL + "static/"
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static'),

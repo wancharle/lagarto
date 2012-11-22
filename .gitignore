@@ -16,4 +16,5 @@ apache2/logs
 */*/settings/local/*
 docs/_build
 *.db
+media/
 database/
