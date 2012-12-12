@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Import global settings to make it easier to extend settings.
 from django.conf.global_settings import *   # pylint: disable=W0614,W0401
 
@@ -9,6 +10,10 @@ TEMPLATE_DEBUG = DEBUG
 #----------------------------------
 TIME_ZONE = 'America/Sao_Paulo'
 LANGUAGE_CODE = 'pt-br'
+LANGUAGES = (
+    ('pt-br', u'Português'),
+    ('en', u'Inglês'),
+)
 SITE_ID = 2
 USE_I18N = True
 USE_L10N = True
@@ -51,6 +56,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 
     # Uncomment the next line for simple clickjacking protection:
