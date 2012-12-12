@@ -15,13 +15,14 @@
     <div class="grid3">
  <form id="lang" action="/i18n/setlang/" method="post">
     {% ifequal LANGUAGES.1.0 LANGUAGE_CODE %}
-        <input type="hidden" value="{{ LANGUAGES.0.0}}" name="language"/>
+        <input type="hidden" value="{{ LANGUAGES.0.0}}" name="language"/> 
+        <p class="flag"><a href="javascript:$('#lang').submit();"><img src="{{ STATIC_PREFIX }}img/flag-pt-br.png" /></a></p>
         {% else %}
             <input type="hidden" value="{{ LANGUAGES.1.0}}" name="language"/>
+        <p class="flag"><a href="javascript:$('#lang').submit();"><img src="{{ STATIC_PREFIX }}img/flag-en.png" /></a></p>
     {% endifequal %}
 {% csrf_token %}
-    </form>
-        <p class="flag"><a href="javascript:$('#lang').submit();"><img src="{{ STATIC_PREFIX }}img/flag-{{LANGUAGE_CODE}}.png" /></a></p>
+        </form>
         <div class="fb-like" style="margin-top:25px;margin-right:20px;float:right;" data-href="http://www.rabodolagarto.com.br" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 
     </div>

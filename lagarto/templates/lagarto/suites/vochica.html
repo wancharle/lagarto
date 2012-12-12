@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% get_static_prefix as STATIC_PREFIX %}
 
 
@@ -7,15 +8,17 @@
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
                     <p>VÓ CHICA</p>
-                    <p>Suíte em andar superior, com quarto amplo, integrado com sala, ambiente da lareira e banheiro com ofurô.  Varanda com rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD estéreo, DVD, acesso à internet, edredon de pluma de ganso, lençóis e toalhas  de algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, frigobar, secador de cabelo. </p>
-                    <p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda, do Box e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p>
-                    <p>Queda d´água  do Rio Jucu no fundo da suíte. Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
+{% blocktrans %}
+<p>Suíte em andar superior, com quarto amplo, integrado com sala, ambiente da lareira e banheira de ofurô. Varanda. Telefone, TV de LCD, com mais de 100 canais SKY HD, DVD, acesso gratuito à internet, edredon de pluma de ganso, lençóis e toalhas de algodão egípcio com barra de crochê ou richilieu, frigobar, secador de cabelo. Roupões e sandálias masculino e feminino.</p>
+<p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda, do box e da banheira de ofurô.  Cama king size. </p>
+<p>Queda d´água do Rio Jucu no fundo da suíte. Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
+{% endblocktrans %}
 
                     <p class="thumbs">
-                    <a class="fancybox" rel="vochica" id="gal-vochica" title="Suíte Loft Vó Chica" href="{{ STATIC_PREFIX }}img/suites/vochica/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb1.jpg" ></a>
-                    <a class="fancybox" rel="vochica" title="Suíte Loft Vó Chica" href="{{ STATIC_PREFIX }}img/suites/vochica/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb2.jpg" ></a>
-                    <a class="fancybox first" rel="vochica" title="Suíte Loft Vó Chica - essa é a visão de quem entra no quarto" href="{{ STATIC_PREFIX }}img/suites/vochica/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb3.jpg" ></a>
-                    <a class="fancybox" rel="vochica" title="Essa manta preta é um conforto incrível!" href="{{ STATIC_PREFIX }}img/suites/vochica/foto4.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb4.jpg" ></a>
+                    <a class="fancybox" rel="vochica" id="gal-vochica"  href="{{ STATIC_PREFIX }}img/suites/vochica/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb1.jpg" ></a>
+                    <a class="fancybox" rel="vochica"  href="{{ STATIC_PREFIX }}img/suites/vochica/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb2.jpg" ></a>
+                    <a class="fancybox first" rel="vochica"  href="{{ STATIC_PREFIX }}img/suites/vochica/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb3.jpg" ></a>
+                    <a class="fancybox" rel="vochica"  href="{{ STATIC_PREFIX }}img/suites/vochica/foto4.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/vochica/thumb4.jpg" ></a>
                     </p>
 
                     <p style="text-align:right;margin-bottom:10px;"><a href="#" onclick="toogle_menu('tarifas');return false;">Tarifas</a></p>
