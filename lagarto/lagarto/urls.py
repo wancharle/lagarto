@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^suites/$', 'django.views.generic.simple.direct_to_template',{'template':'lagarto/suites.html'}, name='suites'),
     url(r'^localizacao/$', 'django.views.generic.simple.direct_to_template',{'template':'lagarto/localizacao.html'}, name='localizacao'),
 
+   (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^newsletter/cancela/(\d+)/(\d+)/$','newsletter.views.cancela_newsletter'),  
     (r'^newsletter/exporta/comerro/$','newsletter.views.exportar_nao_enviados'),
     (r'^newsletter/exporta/contatos/(\w+)/$','newsletter.views.exportar_contatos'),

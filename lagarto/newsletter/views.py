@@ -1,4 +1,4 @@
-#! -*- coding:utf8 -*-
+#! -*- coding:utf-8 -*-
 from email_com_imagem import enviar_email
 
 from django.http import HttpResponse

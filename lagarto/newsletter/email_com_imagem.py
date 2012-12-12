@@ -1,4 +1,4 @@
-# -*- coding: utf-8- -*-
+# -*- coding: utf-8 -*-
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 from email.MIMEImage import MIMEImage

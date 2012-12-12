@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}{% get_available_languages as LANGUAGES %}
+{% get_current_language as LANGUAGE_CODE %}
 {% get_static_prefix as STATIC_PREFIX %}
  <div class="container">
     <div class="grid9 menu submenu {% block submenu_selecionado %}{%endblock%} first">
@@ -11,7 +13,15 @@
     </div>
 
     <div class="grid3">
-        <p class="flag"><a href="/troca-idioma"><img src="{{ STATIC_PREFIX }}img/flag.png" /></a></p>
+ <form id="lang" action="/i18n/setlang/" method="post">
+    {% ifequal LANGUAGES.1.0 LANGUAGE_CODE %}
+        <input type="hidden" value="{{ LANGUAGES.0.0}}" name="language"/>
+        {% else %}
+            <input type="hidden" value="{{ LANGUAGES.1.0}}" name="language"/>
+    {% endifequal %}
+{% csrf_token %}
+    </form>
+        <p class="flag"><a href="javascript:$('#lang').submit();"><img src="{{ STATIC_PREFIX }}img/flag-{{LANGUAGE_CODE}}.png" /></a></p>
         <div class="fb-like" style="margin-top:25px;margin-right:20px;float:right;" data-href="http://www.rabodolagarto.com.br" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 
     </div>

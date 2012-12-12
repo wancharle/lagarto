@@ -7,7 +7,7 @@ def get_log():
     import logging
     import logging.handlers
 
-    LOG_FILENAME = '/home/rabodolagarto/logs/crom_jog.log'
+    LOG_FILENAME = settings.LOG_FILENAME #'/home/rabodolagarto/logs/crom_jog.log'
 
     # Set up a specific logger with our desired output level
     my_logger = logging.getLogger('Crom_job')
