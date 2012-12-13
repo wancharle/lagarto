@@ -1,23 +1,18 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="bruges" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-bruges').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/bruges/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
+{% blocktrans %}<p>Bruges</p>
+<p>Suíte térrea ampla, com varanda, lareira, DVD, TV de LCD com mais de 100 canais SKY HD, acesso gratuito à internet, frigobar, varanda, quarto e amplo banheiro. Equipada com cama de casal Queen size, edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu,  roupão e sandálias masculino e feminino e secador de cabelos. </p>
+<p>Vista para a Pedra Azul e Pedra das Flores a partir da varanda, da cama e da sala. Cama queen size, com pillow top. Queda d´água do Rio Jucu no fundo da suíte.</p>
+<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>{% endblocktrans %}
 
-<p>Bruges</p>
-<p>Suíte térrea, com quarto amplo, integrado com sala, ambiente da lareira e banheiro. Varanda com
-rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD estéreo, DVD, acesso à internet,
-edredon de pluma de ganso, lençóis e toalhas de algodão egípcio com barra de crochê ou
-richilieu e/ou bordadas em ponto de cruz, frigobar, secador de cabelo. Confortável saleta de estar
-e de refeições.</p>
 
-<p>Vista para a Pedra Azul e Pedra das Flores a partir da varanda, da cama e da sala.
-Cama king size. Queda d´água do Rio Jucu no fundo da suíte.</p>
-
-<p> Já na reserva é possível encomendar
-um coquetel privé, que será levado ao quarto no momento desejado.</p>
 
                         <p class="thumbs">
                     <a class="fancybox" rel="bruges" id="gal-bruges"   href="{{ STATIC_PREFIX }}img/suites/bruges/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/bruges/thumb1.jpg" ></a>

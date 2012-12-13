@@ -1,18 +1,17 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="mamma" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-mamma').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/mamma/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-<p>Mamma Amalfi</p>
-<p>Suíte menor, porém muito charmosa. Quarto e confortável banheiro ineiramente brancos, com vista
-para a Pedra Azul a partir do leito. Equipada com televisão e DVD. Edredon de pluma de ganso,
-lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de
-cruz.</p>
-<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no
-momento desejado.</p>
-                    <p class="thumbs">
+{% blocktrans %}<p>Mamma Amalfi</p>
+<p>Suíte menor, porém muito charmosa. Quarto com cama Queen size e confortável banheiro inteiramente brancos, com vista para a Pedra Azul a partir do leito. Equipada com TV de LCD com mais de 100 canais SKYHD, DVD, frigobar, acesso gratuito à internet. Edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu. Roupões e sandálias masculino e feminino</p>
+<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>{% endblocktrans %}
+
+                <p class="thumbs">
                     <a class="fancybox" rel="mamma" id="gal-mamma"   href="{{ STATIC_PREFIX }}img/suites/mamma/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb1.jpg" ></a>
                     <a class="fancybox" rel="mamma"   href="{{ STATIC_PREFIX }}img/suites/mamma/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb2.jpg" ></a>
                     <a class="fancybox" rel="mamma"   href="{{ STATIC_PREFIX }}img/suites/mamma/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/mamma/thumb3.jpg" ></a>

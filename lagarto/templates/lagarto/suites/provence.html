@@ -1,23 +1,16 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="provence" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-provence').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/provence/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-<p>Provence</p>
-<p>Suíte com cinco cômodos: um quarto, dois banheiros, sala com lareira e uma varanda. Suíte
-superdimensionada para o hóspede que viaja com família ou requer espaços diferenciados para
-momentos de privacidade com muito espaço. Equipada com cama de casal king size, televisão,
-edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou
-richilieu e/ou bordadas em ponto de cruz, e secador de cabelos. Biblioteca de DVD disponível
-para uso imediato ou através de reserva.</p>
-<p>Visão privilegiada de qualquer cômodo para a Pedra
-Azul. Varanda equipada com rede, cadeiras e mesinha para um drink à noite, olhando as estrelas.</p>
-<p>
-já na reserva é possível encomendar um coquetel privé para esse momento, que será levado ao
-quarto no momento desejado. A decoração lembra os campos de lavanda da Provence.</p>
-                    <p class="thumbs">
+                {% blocktrans %}<p>Provence</p>
+<p>Varanda e lareira. Equipada com cama de casal queen size com pillow top, DVD, TV de LCD com mais de 100 canais SKY HD, acesso gratuito à internet, frigobar, secador de cabelo,edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu.Roupões e sandálias masculino e feminino. Visão privilegiada para a Pedra Azul. A decoração lembra os campos de lavanda da Provence</p>
+<p>Já na reserva é possível encomendar um coquetel privé que será levado ao quarto no momento desejado. </p>{% endblocktrans %}
+                   <p class="thumbs">
                     <a class="fancybox" rel="provence" id="gal-provence"   href="{{ STATIC_PREFIX }}img/suites/provence/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/provence/thumb1.jpg" ></a>
                     <a class="fancybox" rel="provence"   href="{{ STATIC_PREFIX }}img/suites/provence/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/provence/thumb2.jpg" ></a>
                     <a class="fancybox first" rel="provence"   href="{{ STATIC_PREFIX }}img/suites/provence/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/provence/thumb3.jpg" ></a>

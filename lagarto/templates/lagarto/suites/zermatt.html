@@ -1,16 +1,17 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="zermatt" class="bloco grid9">
             <div class="fundo-suite"><a  href="#" onclick="javascript:$('#gal-zermatt').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/zermatt/foto1.jpg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-                    <p>Zermatt</p>
-                    <p>Suíte em andar superior, com quarto amplo, integrados com sala, ambiente da lareira e banheiro com ofurô.  Varanda com rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD estéreo, DVD, acesso à internet, edredon de pluma de ganso, lençóis e toalhas  de algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, frigobar, secador de cabelo. Sala com dois ambientes.
-                    <p>Vista para a Pedra Azul e Pedra das Flores a partir da varanda, do Box e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p>
-                    <p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
-                    </p>
-                     <p class="thumbs">
+                {% blocktrans %}<p>Zermatt</p>
+<p>Suíte em andar superior, com quarto amplo, integrado com sala, ambiente da lareira e banheira de ofurô. Varanda. Telefone, TV de LCD, com mais de 100 canais SKY HD, DVD, acesso gratuito à internet, edredon de pluma de ganso, lençóis e toalhas de algodão egípcio com barra de crochê ou richilieu, frigobar, secador de cabelo. Roupões e sandálias masculino e feminino.</p>
+<p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda, do box e da banheira de ofurô.  Cama queen size. </p>
+<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>{% endblocktrans %}
+                    <p class="thumbs">
                         <a class="fancybox" rel="zermatt" id="gal-zermatt"  href="{{ STATIC_PREFIX }}img/suites/zermatt/foto1.jpg" ><img src="{{ STATIC_PREFIX }}img/suites/zermatt/thumb1.jpg" ></a>
                         <a class="fancybox" rel="zermatt"  href="{{ STATIC_PREFIX }}img/suites/zermatt/foto3.jpg" ><img src="{{ STATIC_PREFIX }}img/suites/zermatt/thumb3.jpg" ></a>
                         <a class="fancybox first" rel="zermatt"  href="{{ STATIC_PREFIX }}img/suites/zermatt/foto2.jpg" ><img src="{{ STATIC_PREFIX }}img/suites/zermatt/thumb2.jpg" ></a>

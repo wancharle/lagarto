@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="piazza" class="bloco grid9">
@@ -6,18 +8,12 @@
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
 
-                    <p>Piazza Navona</p>
-                    <p>
-                    Suíte com quatro cômodos: saleta para televisão, varanda, quarto e amplo banheiro. Equipada
-                    com cama de casal Queen size, televisão, edredon de pluma de ganso, lençóis e toalhas em
-                    algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, roupão masculino
-                    e feminino e secador de cabelos. Biblioteca de DVD disponível para uso imediato ou através
-                    de reserva. Lareira reservada para o quarto, posicionado de frente para enormes janelas, do sofá
-                    é difícil deixar de contemplar a Pedra Azul. A varanda, no quarto, é equipada com rede, duas
-                    poltronas e uma mesinha para um charmoso drink à noite, observando as estrelas.</p>
-                    <p>Já na reserva é possível encomendar um coquetel privé para esse momento, que será levado ao quarto no momento desejado</p>
+{% blocktrans %}<p>Piazza Navona</p>
+<p>Suíte térrea, com varanda, lareira, sala com DVD, TV de LCD com mais de 100 canais SKYHD,  acesso gratuito à internet, frigobar, quarto e amplo banheiro. Equipada com cama de casal Queen size, edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu,  roupão e sandálias masculino e feminino e secador de cabelos. </p>
 
-
+<p>Vista para a Pedra Azul e Pedra das Flores, da sala, da cama e da varanda.</p>
+<p>Já na reserva é possível encomendar um coquetel privé que será levado ao quarto no momento desejado</p>{% endblocktrans %}
+   
                     <p class="thumbs">
                     <a class="fancybox" rel="piazza"    href="{{ STATIC_PREFIX }}img/suites/piazza/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/piazza/thumb1.jpg" ></a>
                     <a class="fancybox" rel="piazza" id="gal-piazza"   href="{{ STATIC_PREFIX }}img/suites/piazza/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/piazza/thumb2.jpg" ></a>

@@ -1,20 +1,16 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="baviera" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-baviera').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/baviera/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-                    <p>Baviera</p>
-                    <p>Suíte térrea, com quarto amplo, integrado com sala, ambiente da lareira e banheiro com banheira
-                    de hidromassagem. Varanda com rede, mesinha e cadeiras. Telefone, TV, mesa com cadeiras, CD
-                    estéreo, DVD, acesso à internet, edredon de pluma de ganso, lençóis e toalhas de algodão
-                    egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz, frigobar, secador de
-                    cabelo. Sala com dois ambientes.</p>
-                    <p>Vista para a Pedra Azul e Pedra das Flores a partir da varanda, da cama e da banheira. Cama king size. Pode-se tomar banho com a visão da Pedra Azul.</p> 
-                    <p> Já na
-                    reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento
-                    desejado. </p>
+{% blocktrans %}<p>Baviera</p>
+<p>Suíte em andar térreo, com quarto amplo, integrado com sala, ambiente da lareira e banheira de hidromassagem. Varanda. Telefone, TV de LCD, com mais de 100 canais SKY HD, DVD, acesso gratuito à internet, edredon de pluma de ganso, lençóis e toalhas de algodão egípcio com barra de crochê ou richilieu, frigobar, secador de cabelo. Roupões e sandálias masculino e feminino. </p>
+<p>Vista para a Pedra Azul e Pedra das Flores a partir da cama, da varanda e da banheira.  Cama queen size, com pillow top</p>
+<p>Já na reserva é possível encomendar um coquetel prive, que será levado ao quarto no momento desejado.</p>{% endblocktrans %}
                     <p class="thumbs">
                     <a class="fancybox" rel="baviera" id="gal-baviera"   href="{{ STATIC_PREFIX }}img/suites/baviera/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/baviera/thumb1.jpg" ></a>
                     <a class="fancybox" rel="baviera"   href="{{ STATIC_PREFIX }}img/suites/baviera/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/baviera/thumb2.jpg" ></a>

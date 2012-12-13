@@ -1,18 +1,17 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="toscana" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-toscana').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/toscana/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-<p>Toscana</p>
-<p>Suíte com três cômodos – quarto, banheiro confortável, varanda equipada com rede, duas
-poltronas e uma mesinha para apreciar um drink durante a noite: já na reserva é possível encomendar
-um coquetel privé para esse momento, que será levado ao quarto no momento desejado.</p>
-<p>Vista para a Pedra Azul a partir do leito. Equipada com televisão e DVD. Edredon de pluma de
-ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu e/ou bordadas em
-ponto de cruz.</p>
-                    <p class="thumbs">
+{% blocktrans %}<p>Toscana</p>
+<p>Suíte com quarto, banheiro confortável, varanda, equipada com cama de casal queen size com pillow top, DVD, TV de LCD com mais de 100 canais SKY HD, frigobar, acesso gratuito à internet, edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu Roupões e sandálias masculino e feminino. Visão privilegiada para a Pedra Azul. </p>
+<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>{% endblocktrans %}
+
+<p class="thumbs">
                     <a class="fancybox" rel="toscana" id="gal-toscana"   href="{{ STATIC_PREFIX }}img/suites/toscana/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/toscana/thumb1.jpg" ></a>
                     <a class="fancybox" rel="toscana"   href="{{ STATIC_PREFIX }}img/suites/toscana/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/toscana/thumb2.jpg" ></a>
                     <a class="fancybox first" rel="toscana"   href="{{ STATIC_PREFIX }}img/suites/toscana/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/toscana/thumb3.jpg" ></a>

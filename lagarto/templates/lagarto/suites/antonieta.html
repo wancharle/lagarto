@@ -1,20 +1,17 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="antonieta" class="bloco grid9">
             <div class="fundo-suite"><a href="#" onclick="javascript:$('#gal-antonieta').click();return false;"><img src="{{ STATIC_PREFIX }}img/suites/antonieta/foto1.jpeg"  width="728px" /></a></div>
             <div class="sub-blocos">
                 <div class="grid4 col2 subbloco">
-<p>Maria Antonieta</p>
-<p>Suíte com quatro cômodos: saleta para televisão, varanda, quarto e amplo banheiro. Equipada
-com cama de casal Queen size, televisão, edredon de pluma de ganso, lençóis e toalhas em
-algodão egípcio com barra de crochê ou richilieu e/ou bordadas em ponto de cruz e secador de
-cabelos. Biblioteca de DVD disponível para uso imediato ou através de reserva. Lareira reservada
-para o quarto, posicionado de frente para enormes janelas, do sofá é difícil deixar de contemplar
-a Pedra Azul. A varanda, no quarto, é equipada com rede, duas poltronas e uma mesinha para um
-charmoso drink à noite, observando as estrelas.</p>
-<p>Já na reserva é possível encomendar um coquetel privé, que será levado ao quarto no momento desejado.</p>
-                    <p class="thumbs">
+{% blocktrans %}<p>Maria Antonieta</p>
+<p>Suíte térrea, com varanda, lareira, sala com DVD, TV de LCD com mais de 100 canais SKYHD,  acesso gratuito à internet, frigobar, quarto e amplo banheiro. Equipada com cama de casal Queen size, edredon de pluma de ganso, lençóis e toalhas em algodão egípcio com barra de crochê ou richilieu,  roupão e sandálias masculino e feminino e secador de cabelos. </p>
+<p>Vista para a Pedra Azul e Pedra das Flores, da sala, da cama e da varanda.</p>
+<p>Já na reserva é possível encomendar um coquetel privé que será levado ao quarto no momento desejado                </p>{% endblocktrans %}
+                   <p class="thumbs">
                     <a class="fancybox" rel="antonieta"    href="{{ STATIC_PREFIX }}img/suites/antonieta/foto1.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/antonieta/thumb1.jpg"  /></a>
                     <a class="fancybox" rel="antonieta"   href="{{ STATIC_PREFIX }}img/suites/antonieta/foto2.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/antonieta/thumb2.jpg"  /></a>
                     <a class="fancybox first" rel="antonieta"   href="{{ STATIC_PREFIX }}img/suites/antonieta/foto3.jpeg" ><img src="{{ STATIC_PREFIX }}img/suites/antonieta/thumb3.jpg"  /></a>
