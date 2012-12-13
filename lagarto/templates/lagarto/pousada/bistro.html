@@ -1,15 +1,17 @@
 {% load static %}
+{% load i18n %}
 {% get_static_prefix as STATIC_PREFIX %}
 <div id="bistro" class="bloco grid9">
         <div class="fundo-pousada"><a href="#" onclick="javascript:$('#gal-bistro').click();return false;"><img src="{{ STATIC_PREFIX }}img/pousada/bistro/foto1.jpg"  width="728px" /></a></div>
 
         <div class="sub-blocos">
         <div class="grid4 col2 subbloco">
-            <p>O Bistrô Cehz Lagarto, integrado à pousada, é o local para se tomar o melhor café da manhã das montanhas: o café da manhã gourmet.</p>
-            <p>É uma casinha aconchegante, com lareira, muita madeira, uma varanda e um deck na frente para contemplação da mais bela vista da Pedra Azul. 
-            A antiga residência dos proprietários agora é um espaço para a melhor refeição do dia: o café da manhã.</p>
-            <p>O Chez Lagarto só serve refeições _ café e jantar - para os hóspedes e convidados dos hóspedes, sob reserva. O cardáppio é exclusivo do final de semana, mudando sempre, sazonal, com o frescor das folhas e especiarias colhidas na horta orgânica. As refeições serão servidas dentro ou fora do Bistrô, no deck em frente, sob as árvores ou junto à caichoeira, conforme estação do ano e desejo do hóspede.</p>
-            <p>Além disso, o hóspede poderá convidar seus amigos e fazer seu próprio almoço gourmet na cozinha, com reserva do espaço que, nesse dia é fechado só para uso do grupo de convidados.</p>
+{% blocktrans %}          
+<p>O Bistrô Chez Lagarto, integrado à pousada, é o local para se tomar o melhor café da manhã das montanhas, o café da manhã gourmet, e também local de jantar exclusivo para os hóspedes, à luz de velas.</p>
+<p>O Chez Lagarto só serve refeições para hóspedes ou convidados deles, sob reserva. As refeições podem ser servidas dentro ou fora do Bistrô, no deck em frente, sob as árvores ou no quarto.</p>
+<p>O hóspede pode também convidar amigos e fazer seu próprio cardápio gourmet, na cozinha, com reserva do espaço.</p>
+<p>O cardápio é preferencialmente sustentável, utilizando ingredientes que viajem até 100km.</p>
+{% endblocktrans %}
             <p class="thumbs">
             <a class="fancybox" rel="gal-pousada" id="gal-bistro"  href="{{ STATIC_PREFIX }}img/pousada/bistro/foto1.jpg" ><img src="{{ STATIC_PREFIX }}img/pousada/bistro/thumb1.jpg" ></a>
             <a class="fancybox" rel="gal-pousada"  href="{{ STATIC_PREFIX }}img/pousada/bistro/foto2.jpg" ><img src="{{ STATIC_PREFIX }}img/pousada/bistro/thumb2.jpg" ></a>

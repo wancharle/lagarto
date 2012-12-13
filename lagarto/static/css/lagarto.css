@@ -242,6 +242,7 @@ div.suites {overflow:hidden}
     color:#ccc;
     width:225px;
 }
+#localizacao div.subbloco p { width:300px;}
 #area-suites div.subbloco:before,
 #area-pousada div.subbloco:before,
 #area-localizacao div.subbloco2:before{

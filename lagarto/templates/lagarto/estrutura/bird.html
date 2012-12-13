@@ -1,13 +1,14 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="bird" class="grid9 bloco" > 
           <div class="grid4 col2 subbloco">
+{% blocktrans %}<p>O Brasil é um dos países mais ricos em espécies de pássaros do mundo. São mais de 1.700 espécies identificadas e, nos últimos 20 anos, foram descobertas mais espécies do que em qualquer país do mundo.</p>
+<p>Pedra Azul é um refúgio de pássaros, que encantam os visitantes auditiva e visualmente. A preservação do local garante a reprodução das aves em grande quantidade, perfeito para quem gosta de observar e fotografar.</p>{% endblocktrans %}
 
-<p>O Brasil é um dos países mais ricos em espécies de pássaros do mundo. São mais de 1.700 espécie identificadas e, nos últimos 20 anos, foram descobertas mais espécies no país do que em qualquer lugar do mundo.</p>
-
-<p>Pedra Azul é um refúgio de pássaros, que encantam os visitantes auditiva e visualmente. A preservação do local garante a reprodução das aves em grande quantidade, perfeito para quem gosta de observar ou fotografar.</p>
-            <br/>
+<br/>
 
             <p class="thumbs">
             <a class="fancybox" rel="gal-bird"  href="{{ STATIC_PREFIX }}img/estrutura/bird/foto1.jpg" ><img src="{{ STATIC_PREFIX }}img/estrutura/bird/thumb1.jpg" ></a>

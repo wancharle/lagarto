@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% get_static_prefix as STATIC_PREFIX %}
                  
 <div id="roteiro-de-charme" class="bloco grid9">
@@ -6,12 +7,14 @@
 
        <div class="sub-blocos">
         <div class="grid3 col2 subbloco">
-            <p>Identifica todos hotéis, pousadas e refúgios ecológicos durante o ano de seu ingresso na Associação.</p>
-            <p>A Associação de Hotéis Roteiros de Charme congrega atualmente 55 Hotéis, Pousadas e Refúgios Ecológicos situados, do Norte ao Sul do Brasil, em 15 estados e 47 destinos turísticos. </p>
-            <p>Fundada em 1992 como entidade privada sem fins lucrativos, seus membros são  selecionados anualmente pela variedade de suas características e personalidades independentes, segundo rígidos critérios quanto ao conforto, qualidade de serviços e responsabilidade sócio-ambiental,  sempre de forma economicamente viável e sustentável.</p>
-            <p>É uma proposta condizente com produtos referidos de forma variada como "luxury", "thematic hotels", "wellness", "boutique hotels" ou ainda que pratiquem uma hotelaria que alia os princípios de "fair trade" , “slow food” e do trade internacional (ética e responsabilidade social).</p>
-          
-            <p style="text-align:right"><a style="color:#999" target="_blank" href="http://www.roteirosdecharme.com.br/">Saiba mais</a></p>                    
+{% blocktrans %}
+<p>A Associação Roteiros de Charme congrega, atualmente, 59 Hotéis, Pousadas e Refúgios Ecológicos situados do Norte ao Sul do Brasil, em 15 estados e 47 destinos turísticos.</p>
+
+<p>Fundada em 1992 como entidade privada sem fins lucrativos, seus membros são selecionados anualmente pela variedade de suas características e personalidades independentes, segundo rígidos critérios quanto ao conforto, qualidade dos serviços e responsabilidade sócio-ambiental, sempre de forma economicamente viável e sustentável.</p>
+
+<p>É uma proposta condizente com produtos referidos de forma variada como “luxury”, “thematic hotels”, “wellness”, “boutique hotels” ou ainda que pratiquem uma hotelaria que alia os princípios de “fair trade” e do trade internacional que pratica responsabilidade social e ética.</p>
+{% endblocktrans %}
+           <p style="text-align:right"><a style="color:#999" target="_blank" href="http://www.roteirosdecharme.com.br/">Saiba mais</a></p>                    
         </div>
         </div>
  </div>

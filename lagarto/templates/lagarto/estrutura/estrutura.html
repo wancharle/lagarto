@@ -1,19 +1,21 @@
 {% load static %}
+{% load i18n %}
+
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div id="estrutura" class="grid9 bloco ativo" > 
           <div class="grid4 first col2 subbloco">
-<p>3 mil metros de área verde;</p>
-<p> Apartamento com acesso para pessoas  com necessidades especiais;</p>
+{% blocktrans %}<p>30 mil metros de área verde;</p>
+<p> Suites com facilidades de acesso para pessoas  com necessidades especiais;</p>
 <p> Restaurante com lareira;</p>
-<p> Bistrô Chez Lagarto;</p>
 <p> Sala de massagem e relaxamento;</p>
-<p> Deck com ambientes privilegiados onde é possível aproveitar drinks e aperitivos de frente para a Pedra Azul;</p>
-<p> Ofurô externo, no jardim, com água quente permanente;</p>
+<p>Deck com ofurôs em ambientes com vista privilegiada, onde é possível solicitar drinks e aperitivos, de frente para a Pedra Azul</p>
 <p> Acervo de DVDs e livros;</p>
 <p> Cardápio de travesseiros e sabonetes;</p>
-<p> Cofres para notebooks na recepção;</p>
-   
+   <p>Sky HDTV em todos os quartos, com mais de 100 canais disponíveis</a>
+<p>TV LCD</p>
+<p>Frigobar personalizado, sempre que solicitado</p>
+<p>Lençois e toalhas de banho em algodão egípcio, peças de enxoval Trussardi, edredons de pluma de ganso</p>{% endblocktrans %}
       
         </div>
         <div class="fundo-estrutura grid5"><a class="fancybox"  href="{{ STATIC_PREFIX }}img/estrutura/foto1.jpg"  rel="gal-estrutura"><img src="{{ STATIC_PREFIX }}img/estrutura/foto1.jpg"  /></a></div>
