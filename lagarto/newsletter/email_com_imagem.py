@@ -14,7 +14,7 @@ def enviar_email(msg,destino,servidor,login,senha):
     msgRoot['To'] = limpa(destino.email)
     msgRoot['List-Unsubscribe']= msg.email_responder_para
     msgRoot['Precedence'] = 'bulk'
-    msgRoot['Reply-To'] = msg.email_responder_para #"bancodedados@maxdamata.com.br"
+    msgRoot['Reply-To'] = msg.email_responder_para 
     msgRoot.preamble = 'This is a multi-part message in MIME format.'
 
     # Encapsulate the plain and HTML versions of the message body in an
@@ -27,7 +27,7 @@ def enviar_email(msg,destino,servidor,login,senha):
     msgAlternative.attach(msgText)
     remove_span = u"""<p style="text-align:center;font-family:Verdana;font-size:9pt;color:#a2a2a2;">Caso não esteja visualizando corretamente este e mail, 
 <a  href="http://rabodolagarto.com.br/newsletter/view/%d/">acesse aqui</a></p><br>
-<br>%s <p style="text-align:center;font-size:9pt;font-family:Verdana;color:#a2a2a2;">Caso não queira mais receber informações do vereador 
+<br>%s <p style="text-align:center;font-size:9pt;font-family:Verdana;color:#a2a2a2;">Caso não queira mais receber informações da pousada 
 <a href="http://rabodolagarto.com.br/newsletter/cancela/%d/%d/">clique aqui</a> 
 ou responda este email com assunto REMOVER.<br>
 Agradecemos sua atenção durante este período.</p>
@@ -48,9 +48,9 @@ Agradecemos sua atenção durante este período.</p>
     # Send the email (this example assumes SMTP authentication is required)
     import smtplib
     smtp = smtplib.SMTP()
-    smtp.connect(servidor) #'smtp.maxdamata.com.br')
+    smtp.connect(servidor)
     smtp.starttls()
-    smtp.login(login,senha) #'vereador@maxdamata.com.br', 'vereador123')
+    smtp.login(login,senha)
     try:
     	smtp.sendmail(msg.email_from, [limpa(destino.email),], msgRoot.as_string())
     except Exception, err:
