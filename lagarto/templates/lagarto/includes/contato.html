@@ -22,11 +22,6 @@
         <p class="error nome" style="display:none">Informe seu nome.</p>
         <label for="contNome">Nome:</label>
         <input type="textbox" id="contNome" name="nome" />
-
-        <p class="error data" style="display:none">Informe sua data de nascimento.</p>
-        <label for="contData">Data Nascimento:</label>
-        <input type="textbox" id="contData" name="data" />
-
         <p class="error email" style="display:none">Informe seu email.</p>
         <label for="contEmail">Email:</label>
         <input type="textbox" id="contEmail" name="email" />
@@ -56,14 +51,7 @@ function valida_contato(){
                 return false;  
             }  
 
-            var data = $("#contData").val();  
-            if (data == "") {  
-                $("#formContato p.data").show();  
-                $("#contData").focus();  
-            return false;  
-            }
-
-            var email = $("#contEmail").val();  
+              var email = $("#contEmail").val();  
             if (email == "") {  
             $("#formContato p.email").show();  
             $("#contEmail").focus();  
@@ -109,12 +97,7 @@ function valida_contato(){
  
 
  
-            $('#contData').iMask({
-                type : 'fixed'
-                , mask : '99/99/9999'
-            });
-
-            $('#contTelefone').iMask({
+                    $('#contTelefone').iMask({
                 type : 'fixed'
                 , mask : ' (99) 9999-99999'
             });

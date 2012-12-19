@@ -20,11 +20,6 @@
         <label for="resNome">Nome:</label>
         <input type="textbox" id="resNome" name="nome" />
            
-        <p class="error data" style="display:none">Informe sua data de nascimento.</p>
-        <label for="resData">Data Nascimento:</label>
-        <input type="textbox" id="resData" name="data" />
-
-
         <p class="error suite" style="display:none">Escolha uma suíte.</p>
         <label for="resSuite">Nome da Suíte:</label>
         <select id="resSuite" name="suite">
@@ -78,12 +73,7 @@ function valida_reservas(){
                 return false;  
             }  
 
-            var data = $("#resData").val();  
-            if (data == "") {  
-                $("#formReservas p.data").show();  
-                $("#resData").focus();  
-            return false;  
-            }
+            
 
             var suite = $("#resSuite").val();  
             if (suite == "") {  
@@ -136,12 +126,7 @@ function valida_reservas(){
            }); 
 
             $("#periodo").datepick({multiSelect:999}); 
-            
-            $('#resData').iMask({
-                type : 'fixed'
-                , mask : '99/99/9999'
-            });
-
+           
             $('#resTelefone').iMask({
                 type : 'fixed'
                 , mask : ' (99) 9999-99999'

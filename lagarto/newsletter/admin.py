@@ -38,7 +38,7 @@ class MensagemAdmin(admin.ModelAdmin):
 
 class ContatoAdmin(admin.ModelAdmin):
     list_filter=('ativo','erro')
-    list_display=('nome','email','telefone','data_nascimento','ativo','erro')
+    list_display=('nome','email','telefone','ativo','erro')
     search_fields=('email',)
 
 admin.site.register(Campanha,CampanhaAdmin)

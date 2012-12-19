@@ -102,7 +102,7 @@ def formreservas(request):
     data = request.POST.get("data","")
     suite = request.POST.get("suite","")
     periodo = request.POST.get("periodo","")
-    message = "Pedido de reserva feito no site rabodolagarto.com.br:\n Nome: %s\n Telefone: %s \n Email: %s \n Data de nascimento: %s\n Suite: %s \n Periodo: %s \n " % (nome,telefone, email, data, suite, periodo)
+    message = "Pedido de reserva feito no site rabodolagarto.com.br:\n Nome: %s\n Telefone: %s \n Email: %s \n Suite: %s \n Periodo: %s \n " % (nome,telefone, email, suite, periodo)
     send_mail('[RESERVA]', message, "reservas@rabodolagarto.com.br" ,["reservas@rabodolagarto.com.br"], fail_silently=False)    
 
     try:
@@ -129,7 +129,7 @@ def formcontato(request):
     telefone = request.POST.get("telefone","")
     data = request.POST.get("data","")
     msg = request.POST.get("mensagem","")
-    message = "CONTATO \n Nome: %s\n Telefone: %s \n Email: %s \n Data de nascimento: %s\n Mensagem: %s \n " % (nome,telefone, email, data, msg)
+    message = "CONTATO \n Nome: %s\n Telefone: %s \n Email: %s \n Mensagem: %s \n " % (nome,telefone, email,  msg)
     send_mail('[CONTATO]', message, "contato@rabodolagarto.com.br" ,["contato@rabodolagarto.com.br",], fail_silently=False)    
 
     try:
