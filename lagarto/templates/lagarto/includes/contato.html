@@ -1,10 +1,11 @@
 {%  load static %}
+{% load i18n %}
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div class="contato reserva1" id="contato" style="display:none;">
     <div class="col1 grid6 first">
         <div class="borda-sombreada"> 
-            <p style="width:325px;">Entre em contato conosco pelo telefone ou utilize o campo ao lado. <br/>contato@rabodolagarto.com.br </p>
+            <p style="width:325px;">{% trans "Entre em contato conosco pelo telefone ou utilize o campo ao lado." %}<br/>contato@rabodolagarto.com.br </p>
             <p class="telefone"><span>(27)</span> 3248-2383<br/>9942-6121</p>
             <div class="clear"></div>
         </div>
@@ -20,20 +21,20 @@
 
  {% csrf_token %}
         <p class="error nome" style="display:none">Informe seu nome.</p>
-        <label for="contNome">Nome:</label>
+        <label for="contNome">{% trans "Nome:" %}</label>
         <input type="textbox" id="contNome" name="nome" />
         <p class="error email" style="display:none">Informe seu email.</p>
-        <label for="contEmail">Email:</label>
+        <label for="contEmail">{% trans "Email:" %}</label>
         <input type="textbox" id="contEmail" name="email" />
 
         <p class="error telefone" style="display:none">Informe seu telefone.</p>
-        <label for="contTelefone">Telefone:</label>
+        <label for="contTelefone">{% trans "Telefone:" %}</label>
         <input type="textbox" id="contTelefone" name="telefone" />
         
-        <p class="error mensagem" style="display:none">Informe sua mensagem.</p>
-        <label for="id_mensagem">Mensagem:</label>
+        <p class="error mensagem" style="display:none">{% trans "Informe sua mensagem." %}</p>
+        <label for="id_mensagem">{% trans "Mensagem:" %}</label>
         <textarea id="id_mensagem" name="mensagem" class="borda-sombreada" /></textarea> 
-        <p class="botao"><input type="submit" value="enviar"></p>
+        <p class="botao"><input type="submit" value="{% trans "enviar" %}"></p>
 
         </form>
     </div>

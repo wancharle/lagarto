@@ -1,14 +1,17 @@
 {%  load static  %}
+{% load i18n %}
 {% get_static_prefix as STATIC_PREFIX %}
 
 <div class="reservas reserva1" id="reservas" style="display:none;">
     <div class="col1 grid6 first">
         
         <div class="borda-sombreada">
+            {% blocktrans %}
             <p><span style="color:#333;font-weight:normal;">Para reservar</span>, pedimos que seja efetuado um depósito de 50% da diária e nos envie o comprovante desse depósito por email para que sua reserva seja confirmada. Cobramos 10% sobre o total das despesas. <span style="color:#333;font-weight:normal;">Não aceitamos cartão de crédito.</span></p>
             <p>Lembramos que só hospedamos crianças a partir dos 14 anos de idade. Ainda não estamos preparados para receber nossos pequenos hóspedes.</p>
             <p>Verifique a nossa disponibilidade de vagas. </p>
             <p>Teremos o maior prazer em atende-lo também pelo nosso telefone: </p>
+            {% endblocktrans %}
             <p class="telefone"><span>55 27</span>  3248-2383<br/>9942-6121</p>
         </div>
     </div>
@@ -17,13 +20,13 @@
         <form id="formReservas" action="/formreservas/" method="post">
  {% csrf_token %}
         <p class="error nome" style="display:none">Informe seu nome.</p>
-        <label for="resNome">Nome:</label>
+        <label for="resNome">{% trans "Nome:" %}</label>
         <input type="textbox" id="resNome" name="nome" />
            
         <p class="error suite" style="display:none">Escolha uma suíte.</p>
-        <label for="resSuite">Nome da Suíte:</label>
+        <label for="resSuite">{% trans "Nome da Suíte:" %}</label>
         <select id="resSuite" name="suite">
-            <option value="">-- Escolha uma suíte --</option>
+            <option value="">{% trans "-- Escolha uma suíte --" %}</option>
             <option value="Vó Chica">Vó Chica</option>
             <option value="Zermatt">Zermatt</option>
             <option value="Amadeu">Amadeu</option>
@@ -44,19 +47,19 @@
         </select>
 
         <p class="error periodo" style="display:none">Marque os periodos que deseja  reservar.</p>
-        <label for="periodo">Periodo:</label>
+        <label for="periodo">{% trans "Periodo:" %}</label>
         <input type="textbox" id="periodo" name="periodo" />
 
         <p class="error email" style="display:none">Informe seu email.</p>
-        <label for="resEmail">Email:</label>
+        <label for="resEmail">{% trans "Email:" %}</label>
         <input type="textbox" id="resEmail" name="email" />
 
 
         <p class="error phone" style="display:none">Informe seu telefone</p>
-        <label for="resTelefone">Telefone:</label>
+        <label for="resTelefone">{% trans "Telefone:" %}</label>
         <input type="textbox" id="resTelefone" name="telefone" />
         
-        <p class="botao">reservas@rabodolagarto.com.br <input type="submit" value="enviar"></p>
+        <p class="botao">reservas@rabodolagarto.com.br <input type="submit" value="{% trans "enviar" %}"></p>
 
         </form>
     </div>
