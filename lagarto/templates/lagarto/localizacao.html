@@ -1,4 +1,5 @@
 {% extends "lagarto/index.html" %}
+{% load i18n %}
 
 
 {% block menu-selecionado %}menu-localizacao{% endblock %}
@@ -10,7 +11,7 @@
     <div class="container" id="area-localizacao">
         <div class="grid3 first col1 menu-lateral">
             <h2 data-bloco="regiao">A REGIÃO</h2>
-            <h2 class="ativo" data-bloco="localizacao">LOCALIZAÇÃO</h2>
+            <h2 class="ativo" data-bloco="localizacao">{% trans "LOCALIZAÇÃO" %}</h2>
             <h2 data-bloco="transfer">TRANSFER</h2>
 
             <div style="margin-top:150px">

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rabo do lagarto\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-13 19:58-0200\n"
-"PO-Revision-Date: 2012-12-13 20:49-0300\n"
+"POT-Creation-Date: 2012-12-23 10:27-0200\n"
+"PO-Revision-Date: 2012-12-23 10:34-0300\n"
 "Last-Translator: Wancharle Sebastiao Quirino <wancharle@gmail.com>\n"
 "Language-Team: Rabo do lagarto <wancharle@gmail.com>\n"
 "Language: en\n"
@@ -23,7 +23,23 @@ msgstr ""
 
 #: templates/lagarto/index.html:6
 msgid "Pousada Rabo do Lagarto"
-msgstr "Inn's Tail Lizard"
+msgstr "Hotel Rabo do Lagarto"
+
+#: templates/lagarto/index.html:54
+msgid "A POUSADA"
+msgstr "The Hotel"
+
+#: templates/lagarto/index.html:55
+msgid "SUÍTES"
+msgstr "Suites"
+
+#: templates/lagarto/index.html:56
+msgid "ESTRUTURA"
+msgstr "Facilities"
+
+#: templates/lagarto/index.html:57 templates/lagarto/localizacao.html:14
+msgid "LOCALIZAÇÃO"
+msgstr "Location"
 
 #: templates/lagarto/estrutura/bird.html:8
 msgid ""
@@ -71,8 +87,6 @@ msgid ""
 "<p>Wi-fi e telefone nas suítes;</p>\n"
 "        <p>Café da manhã gourmet servido a qualquer hora do dia;</p>\n"
 "        <p>Serviço de governanta exclusiva (agendar);</p>\n"
-"        <p>Trilhas a margem do rio Jucu, na cachoeira do Lagarto e dentro da "
-"propriedade;</p>\n"
 "        <p>Almoço e jantar gourmet, com possibilidade de hóspede utilizar a "
 "cozinha do restaurante para preparar pratos para seus convidados;</p>\n"
 "        <p>Refeições com chef de cozinha exclusivo (agendar); cardápio "
@@ -88,6 +102,177 @@ msgstr ""
 "Costumers may book it first.</p><p>Transfer. Previously booked.</p><p>We "
 "provide a stewardship manager for special occasions such as honeymoons, "
 "birthdays and celebrations. Previously booked.</p>"
+
+#: templates/lagarto/includes/contato.html:8
+msgid "Entre em contato conosco pelo telefone ou utilize o campo ao lado."
+msgstr "Contact us by phone or by using our contact field:"
+
+#: templates/lagarto/includes/contato.html:24
+#: templates/lagarto/includes/reservas.html:23
+msgid "Nome:"
+msgstr "Name:"
+
+#: templates/lagarto/includes/contato.html:27
+#: templates/lagarto/includes/reservas.html:54
+msgid "Email:"
+msgstr ""
+
+#: templates/lagarto/includes/contato.html:31
+#: templates/lagarto/includes/reservas.html:59
+msgid "Telefone:"
+msgstr "Phone:"
+
+#: templates/lagarto/includes/contato.html:34
+msgid "Informe sua mensagem."
+msgstr ""
+
+#: templates/lagarto/includes/contato.html:35
+msgid "Mensagem:"
+msgstr "Message:"
+
+#: templates/lagarto/includes/contato.html:37
+#: templates/lagarto/includes/reservas.html:62
+msgid "enviar"
+msgstr "SEND"
+
+#: templates/lagarto/includes/menu_inferior.html:8
+msgid "HOME"
+msgstr ""
+
+#: templates/lagarto/includes/menu_inferior.html:9
+msgid "CONTATO"
+msgstr "CONTACT"
+
+#: templates/lagarto/includes/menu_inferior.html:10
+msgid "RESERVAS"
+msgstr "BOOKING"
+
+#: templates/lagarto/includes/menu_inferior.html:11
+msgid "TARIFAS"
+msgstr "FARES"
+
+#: templates/lagarto/includes/reservas.html:9
+#, python-format
+msgid ""
+"\n"
+"            <p><span style=\"color:#333;font-weight:normal;\">Para reservar</"
+"span>, pedimos que seja efetuado um depósito de 50%% da diária e nos envie o "
+"comprovante desse depósito por email para que sua reserva seja confirmada. "
+"Cobramos 10%% sobre o total das despesas. <span style=\"color:#333;font-"
+"weight:normal;\">Não aceitamos cartão de crédito.</span></p>\n"
+"            <p>Lembramos que só hospedamos crianças a partir dos 14 anos de "
+"idade. Ainda não estamos preparados para receber nossos pequenos hóspedes.</"
+"p>\n"
+"            <p>Verifique a nossa disponibilidade de vagas. </p>\n"
+"            <p>Teremos o maior prazer em atende-lo também pelo nosso "
+"telefone: </p>\n"
+"            "
+msgstr ""
+"\n"
+"<p><span style=\"color:#333;font-weight:normal;\">For booking</span> we ask "
+"for a 50%% fare advanced. To confirm your reservation you must send us the "
+"receipt. <span style=\"color:#333;font-weight:normal;\">We do NOT work with "
+"credit cards.</span></p>\n"
+"            <p>We also don't accept children under 14 years. We are not "
+"prepared to receive them.  </p>\n"
+"            <p>Check our availability. </p>\n"
+"            <p>We'll be glad of helping you.</p>"
+
+#: templates/lagarto/includes/reservas.html:27
+msgid "Nome da Suíte:"
+msgstr "Suite name:"
+
+#: templates/lagarto/includes/reservas.html:29
+msgid "-- Escolha uma suíte --"
+msgstr "-- Choose a suite --"
+
+#: templates/lagarto/includes/reservas.html:50
+msgid "Periodo:"
+msgstr "Period:"
+
+#: templates/lagarto/includes/slider.html:12
+msgid "Sofisticação e Requinte"
+msgstr "Refinement and Sophistication"
+
+#: templates/lagarto/includes/slider.html:20
+msgid "Um lugar incrível"
+msgstr "An amazing place"
+
+#: templates/lagarto/includes/slider.html:28
+msgid "A Pousada e você"
+msgstr "Hotel and You"
+
+#: templates/lagarto/includes/slider.html:36
+msgid "Atenção em cada detalhe!"
+msgstr "Attention to details"
+
+#: templates/lagarto/includes/tarifas.html:25
+msgid "Suítes Confort"
+msgstr "Confort Suite"
+
+#: templates/lagarto/includes/tarifas.html:27
+msgid ""
+"<p>São suítes de menor porte, apenas duas têm varanda - Toscana e Provence - "
+"e a Provence tem \n"
+"lareira também. Porém, todas as confort têm a mesma qualidade de serviços de "
+"todas as categorias: quarto com banheiro privativo, frigobar, TV LCD, 147 "
+"canais SKY HDTV,internet  wireless gratuita, lençois de algodão egípcio, "
+"peças de enxoval Trussardi, Alexandre Herchcovitch e Buddemeyer, edredon de "
+"pluma de ganso, roupões de banho, secador de cabelo, shampoo e condicionador "
+"da L'Occitane.</p>\n"
+"            <p class=\"green\">Conheça tudo sobre nossas suítes confort!<br /"
+">"
+msgstr ""
+"<p>A bit smaller suites, only two have balconies - Tuscany and Provence - "
+"Provence and also has a fireplace. However, all \"contort suites\" have the "
+"same quality of service of all categories: room with private bathroom, "
+"fridge, LCD TV, 147 channels SKY HDTV, free wireless internet, Egyptian "
+"cotton sheets, pieces of layette Trussardi, Alexandre Herchcovitch and "
+"Buddemeyer, goose feather comforter, bathrobes, hair dryer, shampoo and hair "
+"cream from L'Occitane.</p>\n"
+"            <p class=\"green\">Check all about our contort suites.<br />"
+
+#: templates/lagarto/includes/tarifas.html:42
+msgid "Suítes Estúdio"
+msgstr "Studio Suite"
+
+#: templates/lagarto/includes/tarifas.html:44
+msgid ""
+"<p>Todas têm sala, varanda e lareira, quarto com banehiro privativo, "
+"frigobar, TV LCD, 147 canais SKY HDTV,internet wireless gratuita, lençois de "
+"algodão egípcio, peças de enxoval Trussardi, Alexandre Herchcovitch e "
+"Buddemeyer, edredon de pluma de ganso, roupões de banho, secador de cabelo, "
+"shampoo e condicionador da L'Occitane.</p>\n"
+"            <p class=\"green\">Conheça tudo sobre nossas suítes confort!<br /"
+">"
+msgstr ""
+"<p>All have a living room, balcony and fireplace, bedroom with private "
+"banehiro, fridge, LCD TV, 147 channels SKY HDTV, free wireless internet, "
+"Egyptian cotton sheets, pieces of layette Trussardi, Alexandre Herchcovitch "
+"and Buddemeyer, goose feather comforters, robes bath, hair dryer, shampoo "
+"and conditioner from L'Occitane.</p>\n"
+"            <p class=\"green\">Check all about our contort suites.<br />"
+
+#: templates/lagarto/includes/tarifas.html:56
+msgid "Suítes Loft"
+msgstr "Loft Suite"
+
+#: templates/lagarto/includes/tarifas.html:58
+msgid ""
+"<p>Todas têm banheira de ofurô OU hidro, com lareira e varanda, quarto com "
+"banehiro privativo, frigobar, TV LCD, 147 canais SKY HDTV,internet wireless "
+"gratuita, lençois de algodão egípcio, peças de enxoval Trussardi, Alexandre "
+"Herchcovitch e Buddemeyer, edredon de pluma de ganso, roupões de banho, "
+"secador de cabelo, shampoo e condicionador da L'Occitane.</p>\n"
+"            <p class=\"green\">Conheça tudo sobre nossas suítes confort!<br /"
+">"
+msgstr ""
+"<p>All have bath tub or hydro, fireplace and balcony, bedroom with ensuite "
+"banehiro, fridge, LCD TV, 147 channels SKY HDTV, free wireless internet, "
+"Egyptian cotton sheets, pieces of layette Trussardi, Alexandre Herchcovitch "
+"and Buddemeyer, feather duvet goose, bathrobes, hair dryer, shampoo and "
+"conditioner from L'Occitane.</p>\n"
+"            <p class=\"green\">Check all about our contort suites.<br />"
 
 #: templates/lagarto/localizacao/local.html:8
 msgid ""
