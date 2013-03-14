@@ -85,6 +85,8 @@ def registrar_email(request):
 from django.core.mail import send_mail
 from django.core.validators import validate_email
 from lagarto.settings.local import EMAIL_DESTINO
+from django.core.mail import EmailMessage
+
 def formreservas(request):
     nome = request.POST.get("nome","")
     jdata={}
@@ -103,8 +105,8 @@ def formreservas(request):
     suite = request.POST.get("suite","")
     periodo = request.POST.get("periodo","")
     message = "Pedido de reserva feito no site rabodolagarto.com.br:\n Nome: %s\n Telefone: %s \n Email: %s \n Suite: %s \n Periodo: %s \n " % (nome,telefone, email, suite, periodo)
-    send_mail('[RESERVA]', message, "reservas@rabodolagarto.com.br" ,["reservas@rabodolagarto.com.br"], fail_silently=False)    
-
+    msg=EmailMessage('[RESERVA]', message, "reservas@rabodolagarto.com.br" ,["reservas@rabodolagarto.com.br"], headers = {'Reply-To':email})
+    msg.send()
     try:
         contato = Contato.objects.get(email=email)
     except:
@@ -130,8 +132,9 @@ def formcontato(request):
     data = request.POST.get("data","")
     msg = request.POST.get("mensagem","")
     message = "CONTATO \n Nome: %s\n Telefone: %s \n Email: %s \n Mensagem: %s \n " % (nome,telefone, email,  msg)
-    send_mail('[CONTATO]', message, "contato@rabodolagarto.com.br" ,["contato@rabodolagarto.com.br",], fail_silently=False)    
-
+    
+    msg=EmailMessage('[CONTATO]', message, email ,["rabo.lagarto@gmail.com",],  headers = {'Reply-To': email})    
+    msg.send()
     try:
         contato = Contato.objects.get(email=email)
     except:
