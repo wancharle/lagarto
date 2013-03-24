@@ -3,7 +3,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% get_static_prefix as STATIC_PREFIX %}
  <div class="container">
-    <div class="grid9 menu submenu {% block submenu_selecionado %}{%endblock%} first">
+    <div class="grid6 menu submenu {% block submenu_selecionado %}{%endblock%} first">
          <ul>
        <li class="home"><a href="/" >{% trans "HOME" %}</a></li>
        <li class="contato"><a  href="#" onclick="toogle_menu('contato');return false;" >{% trans "CONTATO" %}</a></li>
@@ -12,7 +12,7 @@
         </ul>  
     </div>
 
-    <div class="grid3">
+    <div class="grid6">
  <form id="lang" action="/i18n/setlang/" method="post">
     {% ifequal LANGUAGES.1.0 LANGUAGE_CODE %}
         <input type="hidden" value="{{ LANGUAGES.0.0}}" name="language"/> 
@@ -25,6 +25,7 @@
         </form>
         <div class="fb-like" style="margin-top:25px;margin-right:20px;float:right;" data-href="http://www.rabodolagarto.com.br" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 
+    <p style="height:48px;float:right;margin-top:20px;margin-right:20px;"><a href="http://booking.com" target="_blank" style="margin-right:20px;"><img src="{{STATIC_PREFIX }}img/logo booking.jpg" height="20"></a> <a target="_blank" href="http://www.tripadvisor.com/Hotel_Review-g1076184-d3382591-Reviews-Pousada_Rabo_do_Lagarto-Domingos_Martins_State_of_Espirito_Santo.html"><img src="{{STATIC_PREFIX }}img/tripadvisor.png" height="32"></a></p>
     </div>
 </div>
 
