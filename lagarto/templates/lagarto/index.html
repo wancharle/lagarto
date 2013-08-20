@@ -1,3 +1,14 @@
+<style type="text/css">
+.fbpluginrecommendationsbarright{right:10px}#apDiv1 {
+	position: absolute;
+	width: 109px;
+	height: 115px;
+	z-index: 1001;
+	top: 34px;
+	margin-left: 200px;
+}
+    </style>
+    
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
@@ -49,6 +60,9 @@
 
     <div class="container cabecalho">
         <div class="grid2 first"><a href="/" title="Rabo do Lagarto" id="logo"><img src="{{ STATIC_PREFIX }}img/logo.gif"  alt="Rabo do Lagarto logo" /></a> </div>
+       
+       <div id="apDiv1"><a href="http://media.rabodolagarto.com.br/static/admin/360/" target="_blank"><img src="{{ STATIC_PREFIX }}img/360.png" width="107" height="107"></a></div>
+       
         <div class="grid10 menu {% block menu-selecionado %} {%endblock %}">
             <ul>
            <li class="pousada"><a href='{% url pousada %}'><img src="{{ STATIC_PREFIX }}img/icone-pousada.png"  />{% trans "A POUSADA" %}</a></li>
@@ -60,6 +74,9 @@
     </div>
 
     <div class="container-remove-barras">
+    
+    
+    
         {% block conteudo_superior %} 
             {% include "lagarto/includes/slider.html" %}   
         {% endblock %}
