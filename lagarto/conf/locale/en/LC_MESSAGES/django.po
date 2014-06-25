@@ -124,7 +124,7 @@ msgstr "Phone:"
 
 #: templates/lagarto/includes/contato.html:34
 msgid "Informe sua mensagem."
-msgstr ""
+msgstr "Enter your message"
 
 #: templates/lagarto/includes/contato.html:35
 msgid "Mensagem:"
