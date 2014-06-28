@@ -2,12 +2,14 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 
+from paginas.views import CapaView
 from django.contrib import admin
 admin.autodiscover()
 
+
 urlpatterns = patterns('',
     
-    url(r'^$', TemplateView.as_view(template_name='lagarto/index.html'), name='home'),
+    url(r'^$', CapaView.as_view(), name='home'),
     url(r'^pousada/$', TemplateView.as_view(template_name='lagarto/pousada.html'), name='pousada'),
     url(r'^estrutura/$',TemplateView.as_view(template_name='lagarto/estrutura.html'), name='estrutura'),
     url(r'^suites/$', TemplateView.as_view(template_name='lagarto/suites.html'), name='suites'),

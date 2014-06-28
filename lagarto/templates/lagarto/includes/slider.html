@@ -1,41 +1,37 @@
-{% load i18n %}
+{% load i18n %}{% get_available_languages as LANGUAGES %}
+{% get_current_language as LANGUAGE_CODE %}
+
 {% load static %}
+{% load cropping %}
 {% get_static_prefix as STATIC_PREFIX %}
 <div class="container" id="slide" style="visibility:hidden;">
     <div class="slider">
         <div class="images" id="images">
 
+		
+    {% ifequal LANGUAGES.1.0 LANGUAGE_CODE %}
+		{% for slide in sliders %}
                 <div class="grupo">
-                    <img src="{{ STATIC_PREFIX }}img/capa/slider1.jpg"  />
-                    <div class="leg" id="leg1">
-                        <div class="caixa opa50"> </div>
-                        <p class="chamada">{% trans "Sofisticação e Requinte" %}</p>
+                    <img src="{% cropped_thumbnail slide "cropping" %}"  />
+                    <div class="leg" id="leg{{ slide.ordem }}">
+                        <div class="caixa opa50"> </div>	
+                        <p class="chamada">{{ slide.legenda_em_ingles }}</p>
                     </div>
                 </div>
+		{% endfor %}
+     {% else %}
+		{% for slide in sliders %}
+                <div class="grupo">
+                    <img src="{% cropped_thumbnail slide "cropping" %}"  />
+                    <div class="leg" id="leg{{ slide.ordem }}">
+                        <div class="caixa opa50"> </div>	
+                        <p class="chamada">{{ slide.legenda }}</p>
+                    </div>
+                </div>
+		{% endfor %}
 
-                <div class="grupo">
-                    <img src="{{ STATIC_PREFIX }}img/capa/slider2.jpg"  /> 
-                    <div class="leg" id="leg2">
-                        <div class="caixa opa50"> </div>
-                        <p class="chamada">{% trans "Um lugar incrível" %}</p>
-                    </div>
-                </div>
+     {% endifequal %}
 
-                <div class="grupo">
-                    <img src="{{ STATIC_PREFIX }}img/capa/slider3.jpg"  /> 
-                    <div class="leg" id="leg3">
-                        <div class="caixa opa50"> </div>
-                        <p class="chamada">{% trans "A Pousada e você" %}</p>
-                    </div>
-                </div>
-
-                <div class="grupo">
-                    <img src="{{ STATIC_PREFIX }}img/capa/slider4.jpg"  /> 
-                    <div class="leg" id="leg4">
-                        <div class="caixa opa50"> </div>
-                        <p class="chamada">{% trans "Atenção em cada detalhe!" %}</p>
-                    </div>
-                </div>
         </div>
         <div class="botoes">
             <div class="prev" id="prev"></div>
@@ -62,10 +58,9 @@ $(window).load(function() {
     );
 
     $("div.botoes").click(function(){ 
-        if (slide_n == 3 ) window.location = "/pousada/";
-        if (slide_n == 1 ) window.location = "/suites/";
-        if (slide_n == 4 ) window.location = "/estrutura/";
-        if (slide_n == 2 ) window.location = "/localizacao/";
+	{% for slide in sliders %}
+        if (slide_n == {{ slide.ordem }} ) window.location = "{{ slide.url }}";
+	{% endfor %}
         });
 });
 </script>

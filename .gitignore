@@ -19,3 +19,4 @@ docs/_build
 media/
 database/
 lagartoenv/
+lagarto/static/admin
