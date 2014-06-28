@@ -65,10 +65,10 @@
        
         <div class="grid10 menu {% block menu-selecionado %} {%endblock %}">
             <ul>
-           <li class="pousada"><a href='{% url pousada %}'><img src="{{ STATIC_PREFIX }}img/icone-pousada.png"  />{% trans "A POUSADA" %}</a></li>
-           <li class="suites"><a href="{% url suites %}" ><img src="{{ STATIC_PREFIX }}img/icone-suites.png"  />{% trans "SUÍTES" %}</a></li>
-           <li class="estrutura"><a href="{% url estrutura %}" ><img src="{{ STATIC_PREFIX }}img/icone-estrutura.png"  />{% trans "ESTRUTURA" %}</a></li>
-           <li class="localizacao"><a href="{% url localizacao %}" ><img src="{{ STATIC_PREFIX }}img/icone-localizacao.png"  />{% trans "LOCALIZAÇÃO" %}</a></li>
+           <li class="pousada"><a href='{% url "pousada" %}'><img src="{{ STATIC_PREFIX }}img/icone-pousada.png"  />{% trans "A POUSADA" %}</a></li>
+           <li class="suites"><a href='{% url "suites" %}' ><img src="{{ STATIC_PREFIX }}img/icone-suites.png"  />{% trans "SUÍTES" %}</a></li>
+           <li class="estrutura"><a href='{% url "estrutura" %}' ><img src="{{ STATIC_PREFIX }}img/icone-estrutura.png"  />{% trans "ESTRUTURA" %}</a></li>
+           <li class="localizacao"><a href='{% url "localizacao" %}' ><img src="{{ STATIC_PREFIX }}img/icone-localizacao.png"  />{% trans "LOCALIZAÇÃO" %}</a></li>
             </ul>
         </div>
     </div>
