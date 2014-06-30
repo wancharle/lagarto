@@ -119,11 +119,13 @@ div.slider div.prev {float:left;text-align:right;background:url(../img/prev.png)
 div.slider div.next {float:right;text-align:left;background:url(../img/next.png) no-repeat left center;}
 
 div.slider div.leg {height:65px;color:white;z-index:1000;}
-div.slider div.leg {float:right;position:relative; top:-100px;right:100px;padding:5px 10px; }
+div.slider div.leg {float:right;position:relative; top:-100px;right:250px;padding:5px 10px; }
 #leg1 { float:right;right:250px;}
 #leg2 { float:left;left:250px;}
 #leg3 { float:left;left:250px;}
 #leg4 { float:right;right:250px;}
+#leg5 { float:left;right:250px;}
+#leg6 { float:right;right:250px;}
 div.slider div.caixa {position:relative;top:-15px;left:0px;width:100%;float:left;height:65px;background-color:black;}
 div.slider p.chamada {font-family:"ConeriaScriptDemo";text-align:center; font-size:36px;position:relative;padding:3px 10px;top:-65px;}
 div.slider p.frase {font-family:"HelveticaNeue";text-align:right; font-size:12px;    position:relative;padding:0px 10px;top:-65px;}
