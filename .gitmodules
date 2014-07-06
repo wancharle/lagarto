@@ -1,0 +1,3 @@
+[submodule "lagarto/appfotos"]
+	path = lagarto/appfotos
+	url = git@github.com:wancharle/appfotos.git
