@@ -32,7 +32,7 @@
 	margin: 0 auto;
 }
 
-.container-remove-barras { clear:both;width:100%;max-width:2040px; overflow:hidden;}
+.container-remove-barras { clear:both;width:100%;max-width:4096px; overflow:hidden;}
 
 .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .col1, .col2, .col3, .col4 {
 	float: left;
