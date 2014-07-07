@@ -94,11 +94,33 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'image_cropping',
  	'appfotos',
+    'tinymce',
 )
+
+########## END LOGGING CONFIGURATION
+TINYMCE_DEFAULT_CONFIG = {
+ #   "file_browser_callback": "mce_filebrowser",
+    'plugins': "paste,searchreplace",
+    'theme': "advanced",
+    'theme_advanced_buttons1' : "bold,italic,underline,code,|,fullscreen",
+
+
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
+########## WSGI CONFIGURATION
 
 from easy_thumbnails.conf import Settings as thumbnail_settings
 THUMBNAIL_PROCESSORS = (
     'image_cropping.thumbnail_processors.crop_corners',
 ) + thumbnail_settings.THUMBNAIL_PROCESSORS
+
+
+from django.conf import global_settings
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    'django.core.context_processors.request',
+)
+
+
 
 # vim: set ts=4 sw=4 sts=4 expandtab:

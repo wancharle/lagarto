@@ -3,6 +3,9 @@
 {% block menu-selecionado %}menu-suites{% endblock %}
 
 {% block conteudo_superior %}
+{% load i18n %}{% get_available_languages as LANGUAGES %}
+{% get_current_language as LANGUAGE_CODE %}
+
 
 <div class="container">
 <div class="suites">
@@ -10,55 +13,55 @@
 
         <div class="grid3 first col1 menu-lateral">
             <nav>
-            <h2 class="ativo" data-bloco="vochica";>Suíte Loft</h2>
+	    {% for tipo in object_list reversed %}
+	   	<h2  {% if forloop.first %} class="ativo" {% endif %} data-bloco="s{{ tipo.evento_set.all.0.id }}">
+			{% ifequal LANGUAGES.0.0 LANGUAGE_CODE %}{{ tipo.nome  }}{% else %}{{ tipo.nome_en  }}{% endifequal %}
+		</h2>
                 <ul>
-                <li class="ativo" data-bloco="vochica">Vó Chica</li>
-                <li data-bloco="zermatt">Zermatt</li>
-                <li data-bloco="amadeus">Amadeus</li>
-                <li data-bloco="baviera">Baviera</li>
-                <li data-bloco="pomeranea">Pomerânea</li>
-                <li data-bloco="aymores">Aymorés</li>
+		{% for suite in tipo.evento_set.all %}
+			{% if forloop.first and forloop.parentloop.first %}
+			<li class="ativo" data-bloco="s{{ suite.id}}">{{ suite.titulo}}</li>
+			{% else %}
+			<li data-bloco="s{{ suite.id}}">{{ suite.titulo }}</li>
+			{% endif %}
+		{% endfor %}
                 </ul>
-            <h2 data-bloco="piazza">Suíte Estúdio</h2>
-                <ul>
-                <li data-bloco="piazza">Piazza Navona</li>
-                <li data-bloco="mosteiro">Mosteiro dos Jerónimos</li>
-                <li data-bloco="bruges">Bruges</li>
-                <li data-bloco="rembrandt">Rembrandt </li>
-                <li data-bloco="antonieta">Maria Antonieta</li>
-                </ul>
-            <h2 data-bloco="douro">Suíte Confort</h2>
-                <ul>
-                <li data-bloco="douro">D´Ouro</li>
-                <li data-bloco="saopaulim">São Paulim</li>
-                <li data-bloco="carrara">Carrara</li>
-                <li data-bloco="provence">Provence</li>
-                <li data-bloco="mamma">Mamma Amalfi</li>
-                <li data-bloco="toscana">Toscana</li>
-                </ul>
-           </nav>
+	    {% endfor %} 
+          </nav>
         </div>
 
-      {% include "lagarto/suites/vochica.html" %}
-      {% include "lagarto/suites/zermatt.html" %}
-      {% include "lagarto/suites/amadeu.html" %}
-      {% include "lagarto/suites/baviera.html" %}
-      {% include "lagarto/suites/pomeranea.html" %}
-      {% include "lagarto/suites/aymores.html" %}
+{% load cropping %}
+{% load thumbnail %}
 
-      {% include "lagarto/suites/piazza.html" %}
-      {% include "lagarto/suites/mosteiro.html" %}
-      {% include "lagarto/suites/bruges.html" %}
-      {% include "lagarto/suites/rembrandt.html" %}
-      {% include "lagarto/suites/antonieta.html" %}
+{% for tipo in object_list %}
+{% for suite in tipo.evento_set.all %}
 
-      {% include "lagarto/suites/douro.html" %}
-      {% include "lagarto/suites/saopaulim.html" %}
-      {% include "lagarto/suites/carrara.html" %}
-      {% include "lagarto/suites/provence.html" %}
-      {% include "lagarto/suites/mamma.html" %}
-      {% include "lagarto/suites/toscana.html" %}
+<div id="s{{ suite.id}}" class="bloco {% if forloop.first and forloop.parentloop.first %}ativo{% endif %} grid9">
+            <div class="fundo-suite"><a  rel="s{{ suite.id}}" class="fancybox" href="{% cropped_thumbnail suite cropping max_size=1024x764 %}">
 
+<img src="{% cropped_thumbnail suite cropping %}" width="720px" /></a></div>
+            <div class="sub-blocos">
+                <div class="grid4 col2 subbloco">
+
+		{% ifequal LANGUAGES.0.0 LANGUAGE_CODE %}
+			{{ suite.descricao|safe }}
+		{% else %}
+			{{ suite.descricao_en|safe }}
+		{% endifequal %}
+                    <p class="thumbs">
+			{% for foto in suite.foto_set.all %}
+ {% thumbnail foto.foto "50x50" crop="center" as small %} 
+                    <a class="fancybox {% if forloop.first %}first{% endif %}" rel="s{{suite.id}}"  href="{% cropped_thumbnail foto cropping max_size=1024x764 %}" ><img src="{{ small.url}}" ></a>
+			{% endfor %}
+                    </p>
+
+                    <p style="text-align:right;margin-bottom:10px;"><a href="#" onclick="toogle_menu('tarifas');return false;">Tarifas</a></p>
+                    <p style="text-align:right"><a href="#" onclick="toogle_menu('reservas');return false;">Disponibilidade</a></p>
+                </div>
+            </div>
+</div>
+{% endfor %}
+{% endfor %}
 
 
     </div>
