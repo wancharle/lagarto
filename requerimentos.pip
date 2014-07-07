@@ -1,4 +1,4 @@
-Django==1.4.1
+Django==1.5
 wsgiref==0.1.2
-django-image-cropping=0.6.4
+django-image-cropping=0.8
 

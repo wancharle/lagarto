@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'newsletter',
     'easy_thumbnails',
     'image_cropping',
+ 	'appfotos',
 )
 
 from easy_thumbnails.conf import Settings as thumbnail_settings
@@ -100,3 +101,4 @@ THUMBNAIL_PROCESSORS = (
     'image_cropping.thumbnail_processors.crop_corners',
 ) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
+# vim: set ts=4 sw=4 sts=4 expandtab:
