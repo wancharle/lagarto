@@ -51,7 +51,7 @@
                     <p class="thumbs">
 			{% for foto in suite.foto_set.all %}
  {% thumbnail foto.foto "50x50" crop="center" as small %} 
-                    <a class="fancybox {% if forloop.first %}first{% endif %}" rel="s{{suite.id}}"  href="{% cropped_thumbnail foto cropping max_size=1024x764 %}" ><img src="{{ small.url}}" ></a>
+                    <a class="fancybox {% if forloop.first %}first{% endif %}" {% if foto.legenda %}title="{{ foto.legenda }}"{% endif %} rel="s{{suite.id}}"  href="{% cropped_thumbnail foto cropping max_size=1024x764 %}" ><img src="{{ small.url}}" ></a>
 			{% endfor %}
                     </p>
 
