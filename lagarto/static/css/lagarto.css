@@ -210,7 +210,8 @@ border-radius: 5px;
 .fundo-suite img,
 .fundo-estrutura img{position:relative; top:-61px;width:757px;height:563px;}
 .fundo-pousada img {position:relative; top:0px;width:1440px;left:-450px;height:563px;}
-.fundo-estrutura img{ width:514px;left:-50px;}
+.fundo-estrutura img{ width:514px; left:-50px;}
+#estrutura .fundo-estrutura img { width:757px; }
 .fundo-pousada { width: 1440px; overflow :hidden;position:relative; top:-61px; }
 .fundo-pousada,
 .fundo-suite { height:564px; }
@@ -246,6 +247,7 @@ div.suites {overflow:hidden}
 }
 #localizacao div.subbloco p { width:300px;}
 #area-suites div.subbloco:before,
+#estrutura div.subbloco:before,
 #area-pousada div.subbloco:before,
 #area-localizacao div.subbloco2:before{
    content: "";
